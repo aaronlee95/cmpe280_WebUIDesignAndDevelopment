@@ -1,34 +1,106 @@
 <!DOCTYPE html>
-<html>
+<!-- <html> -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <title>Question 1</title>
+</script>
 </head>
 <body>
     <h2><strong>Question 1</strong></h2>
     <ol>
-        <li>Given points (x1, y1) and (x2,yselect the formula to find the equation of the given line.</li>
-            </br>
+        <li>Given points (x1, y1) and (x2,y2) select the formula to find the equation of the given line.</li>
             </br>
             <form>
                 <input type="radio" name="choiceA">
-                <label for="choiceA">A. <em>y = mx + b</em></label>
+                <label for="choiceA">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow>
+                            <mi>y</mi><mo>=</mo><mi>m</mi><mo>&InvisibleTimes;</mo><mi>x</mi><mo>+</mo><mi>b</mi>
+                </label>
                 <br>
                 <input type="radio" name="choiceB">
                 <label for="choiceB">
-                    <msup><mi>x</mi><mn>3</mn></msup>
-                </label>
-
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow>
+                            <mo>(</mo><mi>x</mi><mo>-</mo><mi>h</mi><msup><mo>)</mo><mn>2</mn></msup><mo>+</mo><mo>(</mo><mi>y</mi><mo>-</mo><mi>k</mi><msup><mo>)</mo><mi>2</mi></msup><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup>
+                        </mrow>
+                    </math>
+                </label></br>
+                <input type="radio" name = choiceC>
+                <label for="choiceC">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow>
+                            <mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mi>m</mi><mo>&InvisibleTimes;</mo><mo>(</mo><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo>
+                        </mrow>
+                    </math>
+                </label></br>
+                <input type="radio" name = choiceD>
+                <label for="choiceD">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow>
+                            <mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo>
+                                <mfrac><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>-</mo><msub><mi>y</mi><mn>1</mn></mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>-</mo><msub><mi>x</mi><mn>1</mn></mrow></mfrac>
+                                <mo>&InvisibleTimes;</mo><mo>(</mo><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo>
+                        </mrow>
+                    </math>
+                </label></msub></br>
             </form>
             </br>
             <footer>
                 <input type="button" value="Submit & Next Question">
                 <input type="button" value="Cancel & Clear Selection">
             </footer>
+        </br>
+        </br>
+        </br>
+        <li>Select the cosine theorem formula.</li></br>
+        <form>
+            <input type="radio" name=twoA>
+            <label for="twoA">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>cos</mi><mo>(</mo><mo>&alpha;</mo><mo>&PlusMinus;</mo><mo>&beta;</mo><mo>)</mo><mo>=</mo><mi>cos</mi><mo>&alpha;</mo><mi>cos</mi><mo>&beta;</mo><mo>&MinusPlus;</mo><mi>sin</mi><mo>&alpha;</mo><mi>sin</mi><mo>&beta;</mo>
+                </math>
+            </label></br>
+            <input type="radio" name=twoB>
+            <label for="twoB">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>sin</mi><mo>(</mo><mo>&alpha;</mo><mo>&PlusMinus;</mo><mo>&beta;</mo><mo>)</mo><mo>=</mo><mi>sin</mi><mo>&alpha;</mo><mi>cos</mi><mo>&beta;</mo><mo>&PlusMinus;</mo><mi>cos</mi><mo>&alpha;</mo><mi>sin</mi><mo>&beta;</mo>
+                </math>
+            </label></br>
+            <label for="twoC">
+            <input type="radio" name=twoC>
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>sin</mi><mo>&alpha;</mo><mo>+</mo><mi>sin</mi><mo>&beta;</mo><mo>=</mo><mn>2</mn><mo>&InvisibleTimes;</mo><mi>sin</mi><mo>(</mo>
+                    <mfrac>
+                        <mrow><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                    </mfrac>
+                    <mo>)</mo><mo>&InvisibleTimes;</mo><mi>cos</mi><mo>(</mo>
+                    <mfrac>
+                        <mrow><mo>&alpha;</mo><mo>-</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                    </mfrac>
+                    <mo>)</mo>
+                </math>
+            </label></br>
+            <label for="twoD">
+            <input type="radio" name=twoD>
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>sin</mi><mo>&alpha;</mo><mo>-</mo><mi>sin</mi><mo>&beta;</mo><mo>=</mo><mn>2</mn><mo>&InvisibleTimes;</mo><mi>cos</mi><mo>(</mo>
+                    <mfrac>
+                        <mrow><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                    </mfrac>
+                    <mo>)</mo><mo>&InvisibleTimes;</mo><mi>sin</mi>
+                    <mfrac>
+                        <mrow><mo>&alpha;</mo><mo>-</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                    </mfrac>
+                    <mo>)</mo>
+                </math>
+            </label>
+        </form></br>
+        <footer>
+            <input type="button" value="Submit & Next Question">
+            <input type="button" value="Cancel & Clear Selection">
+        </footer>
 
-        </br>
-        </br>
-        </br>
-        <li>Select the cosine theorem formula.</li>
 
     </ol>
 
