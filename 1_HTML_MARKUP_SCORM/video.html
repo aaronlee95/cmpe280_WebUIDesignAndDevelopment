@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<body>
+    <div class="row">
+      <div class="column" style="background-color:white;">
+        <ol> Watch the video and answer the following question. What is the source as mentioned in the video?</ol>
+            <div class="column" style="background-color:white;">
+                <input type="radio" id="NASA" name="mark" value="NASA.gov">
+                <label for="NASA.gov">NASA.gov</label><br>
+                <input type="radio" id="Facebook" name="mark" value="Facebook">
+                <label for="Facebook">Facebook</label><br>
+            </div>
+
+            <div class="column" style="background-color:white;">
+                <input type="radio" id="data" name="mark" value="Data.gov">
+                <label for="data">Data.gov</label><br>
+                <input type="radio" id="xyz" name="mark" value="xyz">
+                <label for="xyz">XYZ.net</label><br>
+            </div>
+
+      </div>
+      <div class="column" style="background-color:white;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ilifg26TZrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3><strong>Apollo 13 Views of the Moon in 4K</strong></h3>
+        <p>Source: <a href="http://www.nasa.gov/multimedia/videogallery/index.html" target="_blank">http://www.nasa.gov/multimedia/videogallery/index.html#.VBFB5S5dVOE</a></p>
+      </div>
+    </div>
+    <footer>
+        <input type="button" value="Submit & Next Question">
+        <input type="button" value="Cancel & Clear Selection">
+    </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<body>
+    <div class="row">
+      <div class="column" style="background-color:white;">
+        <ol> As per the latest twitter news, complete the article snippet given by selecting appropriate choices for the blanks.</ol>
+            <div class="column" style="background-color:white;">
+                <input type="radio" id="option1_1" name="mark1" value="$650">
+                <label for="$650">Option 1 Mark 1: $650</label><br>
+                <input type="radio" id="option1_2" name="mark1" value="$550">
+                <label for="$550">Option 1 Mark 1: $550</label><br>
+                <input type="radio" id="option1_3" name="mark1" value="$450">
+                <label for="$450">Option 1 Mark 1: $450</label><br>
+            </div>
+
+            <div class="column" style="background-color:white;">
+                <input type="radio" id="option2_1" name="mark2" value="Twitter">
+                <label for="twitter">Option 1 Mark 1: Twitter</label><br>
+                <input type="radio" id="option2_2" name="mark2" value="Google">
+                <label for="google">Option 1 Mark 1: Google</label><br>
+                <input type="radio" id="option2_3" name="mark2" value="Facebook">
+                <label for="facebook">Option 1 Mark 1: Facebook</label><br>
+            </div>
+
+      </div>
+      <div class="column" style="background-color:white;">
+        <p>"<br>Twitter wants more cash. The company announced two <mark>$____</mark> million debt offerings in a filing today, each with a potential $100 increase provided that the sales are oversubscribed. Assuming full tip, including the $100 million boosters <mark>____</mark> will raise up to $1.5 billion with the two offerings.<br>"</p>
+        <p>Source: http://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/</p>
+      </div>
+    </div>
+    <footer>
+        <input type="button" value="Submit & Next Question">
+        <input type="button" value="Cancel & Clear Selection">
+    </footer>
+</body>
+</html>

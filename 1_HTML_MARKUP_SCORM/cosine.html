@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<head>
+  <title>Question 2</title>
+  <body>
+    <div class="row">
+      <div class="column" style="background-color:white;">
+        <p> Select the cosine theorem formula.</p>
+          <form>
+            <div class="column" style="background-color:white;">
+                <input type="radio" name=two>
+                <label for="twoA">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>cos</mi><mo>(</mo><mo>&alpha;</mo><mo>&PlusMinus;</mo><mo>&beta;</mo><mo>)</mo><mo>=</mo><mi>cos</mi><mo>&alpha;</mo><mi>cos</mi><mo>&beta;</mo><mo>&MinusPlus;</mo><mi>sin</mi><mo>&alpha;</mo><mi>sin</mi><mo>&beta;</mo>
+                    </math>
+                </label></br>
+                <input type="radio" name=two>
+                <label for="twoB">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>sin</mi><mo>(</mo><mo>&alpha;</mo><mo>&PlusMinus;</mo><mo>&beta;</mo><mo>)</mo><mo>=</mo><mi>sin</mi><mo>&alpha;</mo><mi>cos</mi><mo>&beta;</mo><mo>&PlusMinus;</mo><mi>cos</mi><mo>&alpha;</mo><mi>sin</mi><mo>&beta;</mo>
+                  </math>
+                </label></br><br><br>
+                <footer>
+                    <input type="button" value="Submit & Next Question">
+                    <input type="button" value="Cancel & Clear Selection">
+                </footer>
+            </div>
+
+            <div class="column" style="background-color:white;">
+                <label for="twoC">
+                <input type="radio" name=two>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>sin</mi><mo>&alpha;</mo><mo>+</mo><mi>sin</mi><mo>&beta=</mo><mn>2</mn><mo>&InvisibleTimes;</mo><mi>sin</mi><mo>(</mo>
+                      <mfrac>
+                        <mrow><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                      </mfrac>
+                      <mo>)</mo><mo>&InvisibleTimes;</mo><mi>cos</mi><mo>(</mo>
+                      <mfrac>
+                          <mrow><mo>&alpha;</mo><mo>-</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                      </mfrac>
+                      <mo>)</mo>
+                    </math>
+                </label></br>
+                <label for="twoD">
+                <input type="radio" name=two>
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>sin</mi><mo>&alpha;</mo><mo>-</mo><mi>sin</mi><mo>&be=</mo><mn>2</mn><mo>&InvisibleTimes;</mo><mi>cos</mi><mo>(</mo>
+                    <mfrac>
+                        <mrow><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                    </mfrac>
+                    <mo>)</mo><mo>&InvisibleTimes;</mo><mi>sin</mi>
+                    <mfrac>
+                      <mrow><mo>&alpha;</mo><mo>-</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                    </mfrac>
+                    <mo>)</mo>
+                  </math>
+                </label>
+            </div>
+          </form>
+      </div>
+    </div>
+  </body>
+</head>
