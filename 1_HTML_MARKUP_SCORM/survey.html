@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 100px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+textarea{
+    vertical-align: top;
+    padding: 10px;
+}
+</style>
+<head>
+    <title>Survey</title>
+    <body>
+        <p>How did you like the center?<br><br>
+        <div>
+            <label>Comments:</label>
+            <textarea id="comments" rows=7 cols=60>
+            </textarea>
+        </p>
+        </div>
+        <div>
+        <font size="5">Select Text Area Location:</font>
+        </div>
+        <div class="row">
+            <div class="column" style="background-color: white;">
+                <label> City: </label>
+                <input list="cities">
+                <datalist id="cities">
+                    <option value="San Jose">
+                    <option value="San Francisco">
+                    <option value="Mountain View">
+                    <option value="Palo Alto">
+                    <option value="Oakland">
+                    <option value="Berkeley">
+                    <option value="San Mateo">
+                    <option value="Redwood City">
+                    <option value="Hayward">
+                    <option value="San Leandro">
+                    <option value="Castro Valley">
+                    <option value="Milpitas">
+                    <option value="Cupertino">
+                    <option value="Santa Clara">
+                    <option value="Sunnyvale">
+                </datalist>
+            </div>
+            <div class="column" style="background-color: white;">
+                <label> Room Number: </label>
+                <input list="room">
+                <datalist id="room">
+                    <option value="Room 100">
+                    <option value="Room 101">
+                    <option value="Room 102">
+                    <option value="Room 103">
+                    <option value="Room 104">
+                    <option value="Room 105">
+                    <option value="Room 106">
+                    <option value="Room 107">
+                    <option value="Room 108">
+                    <option value="Room 109">
+                    <option value="Room 110">
+                    <option value="Room 111">
+                    <option value="Room 112">
+                    <option value="Room 113">
+                    <option value="Room 114">
+                    <option value="Room 115">
+                    <option value="Room 116">
+                    <option value="Room 117">
+                    <option value="Room 118">
+                    <option value="Room 119">
+                    <option value="Room 120">
+                    <option value="Room 121">
+                    <option value="Room 122">
+                    <option value="Room 123">
+                    <option value="Room 124">
+                    <option value="Room 125">
+                    <option value="Room 126">
+                    <option value="Room 127">
+                    <option value="Room 128">
+                    <option value="Room 129">
+                    <option value="Room 130">
+                    <option value="Room 131">
+                    <option value="Room 132">
+                    <option value="Room 133">
+                    <option value="Room 134">
+                    <option value="Room 135">
+                    <option value="Room 136">
+                    <option value="Room 137">
+                    <option value="Room 138">
+                    <option value="Room 139">
+                </datalist>
+            </div><br>
+        </div>
+        <div>
+            <footer>
+                <input type="button" value="Submit & Next Question">
+                <input type="button" value="Cancel & Clear Selection">
+            </footer>
+        </div>
+    </body>
+</head>
+
