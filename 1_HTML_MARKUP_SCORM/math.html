@@ -79,17 +79,30 @@
         <div class="column" style="background-color:white;">
 
           <script type="text/javascript">
-          window.onload = function() {
+          window.onload = function()
+          {
             var chart = new CanvasJS.Chart("chartContainer",
             {
+               axisX:{
+                minimum: 0,
+                maximum: 100,
+                labelFontColor: "transparent"
+               },
+               axisY:{
+                maximum: 100,
+                labelFontColor: "transparent",
+                gridThickness: 0
+               },
                data: [
                   {
                     type: "line",
+                    // indexLabel: "{x},{y}",
+                    indexLabel: "{lab_x},{lab_y}",
                     dataPoints: [
-                    { x: 0, y: 0 },
-                    { x: 30, y: 30 },
-                    { x: 70, y: 70 },
-                    { x: 100, y: 100 },
+                    { x: 0, y: 0},
+                    { x: 30, y: 30, lab_x: "x1", lab_y: "y1"},
+                    { x: 70, y: 70, lab_x: "x2", lab_y: "y2" },
+                    { x: 100, y: 100},
                     ]
                   }
               ]
@@ -100,11 +113,8 @@
           </script>
          <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
         <body>
-          <div id="chartContainer" style="height: 300px; width: 100%;">
+          <div id="chartContainer" style="height: 300px; width: 60%;">
           </div>
-
-
-
         </div>
     </div>
 </html>

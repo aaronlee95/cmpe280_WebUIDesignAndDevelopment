@@ -26,6 +26,7 @@ textarea{
 <head>
     <title>Survey</title>
     <body>
+        <form action="/action_page.php">
         <p>How did you like the center?<br><br>
         <div>
             <label>Comments:</label>
@@ -107,10 +108,11 @@ textarea{
         </div>
         <div>
             <footer>
-                <input type="button" value="Submit & Get Score">
-                <input type="button" value="Skip & Get Score">
+                <button type="submit" formaction="summary.html">Submit & Get Score</button>
+                <button type="submit" formaction="summary.html">Skip & Get Score</button>
             </footer>
         </div>
+    </form>
     </body>
 </head>
 
