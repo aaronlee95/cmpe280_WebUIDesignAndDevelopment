@@ -5,19 +5,20 @@
     </head>
     <body>
         <h2>User Login</h2>
-        <form>
+        <form action="/action_page.php">
+        <!-- <form action="/action_page.php" method="post"> -->
             <label for="uname"><strong>Username: </strong></label>
-            <input type="text" name="uname" size=25>
+            <input type="text" placeholder="Enter Username" name="uname" size=25 required>
             <br/><br/>
             <label for="pwd"><strong>Password: </strong></label>
-            <input type="text" name="pwd" size=25>
+            <input type="password" placeholder="Enter Password" name="pwd" size=25 required>
             <br>
             <br>
+            <footer>
+                <a href="www.google.com">Create Account/Forgot?</a>
+                 <button type="submit" formaction="math.html">Login</button></p>
+            </footer>
         </form>
-        <footer>
-            <a href="www.google.com">Create Account/Forgot?</a>
-            <button>Login</button></p>
-        </footer>
 
     </body>
 </html>

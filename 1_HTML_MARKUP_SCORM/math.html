@@ -65,18 +65,46 @@
                                             <mfrac><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>-</mo><msub><mi>y</mi><mn>1</mn></mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>-</mo><msub><mi>x</mi><mn>1</mn></mrow></mfrac><mo>&InvisibleTimes;</mo><mo>(</mo><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo>
                                 </mrow>
                             </math>
-                        </label><!-- </msub> -->
-                    </div>
+                        </label>
+                    </div><br><br>
+                        <footer>
+                            <br><br>
+                            <button type="submit" formaction="cosine.html">Submit & Next Question</button>
+                            <button type="submit" formaction="math.html">Cancel & Clear Selection</button>
+                        </footer>
+                    </body>
                 </form>
             </ol>
         </div>
         <div class="column" style="background-color:white;">
-            <img src="math.JPG" alt="Graph" height="250" width="250">
+
+          <script type="text/javascript">
+          window.onload = function() {
+            var chart = new CanvasJS.Chart("chartContainer",
+            {
+               data: [
+                  {
+                    type: "line",
+                    dataPoints: [
+                    { x: 0, y: 0 },
+                    { x: 30, y: 30 },
+                    { x: 70, y: 70 },
+                    { x: 100, y: 100 },
+                    ]
+                  }
+              ]
+            });
+
+            chart.render();
+          }
+          </script>
+         <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+        <body>
+          <div id="chartContainer" style="height: 300px; width: 100%;">
+          </div>
+
+
+
         </div>
     </div>
-    <footer>
-        <input type="button" value="Submit & Next Question">
-        <input type="button" value="Cancel & Clear Selection">
-    </footer>
-</body>
 </html>
