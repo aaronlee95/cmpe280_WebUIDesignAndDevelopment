@@ -1,24 +1,35 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>User Login</title>
+        <script type="text/javascript">
+
+        function validate()
+        {
+            var username = document.getElementById("uname")
+            var password = document.getElementById("pwd")
+
+
+            if(username.value == "admin" && password.value=="password"){
+                return true;
+            }
+            else{
+                alert("Wrong Username and/or Password");
+                return false;
+            }
+        }
+        </script>
+
     </head>
     <body>
-        <h2>User Login</h2>
-        <form action="/action_page.php">
-        <!-- <form action="/action_page.php" method="post"> -->
+        <form onsubmit="return validate()" action="math.html">
             <label for="uname"><strong>Username: </strong></label>
-            <input type="text" placeholder="Enter Username" name="uname" size=25 required>
-            <br/><br/>
+            <input type="text" placeholder="Enter Username" id="uname" size=25 required/>
+            <br><br>
             <label for="pwd"><strong>Password: </strong></label>
-            <input type="password" placeholder="Enter Password" name="pwd" size=25 required>
-            <br>
-            <br>
-            <footer>
-                <a href="www.google.com">Create Account/Forgot?</a>
-                 <button type="submit" formaction="math.html">Login</button></p>
-            </footer>
-        </form>
+            <input type="password" placeholder="Enter Password" id="pwd" size=25 required/><br><br>
+            <a href="www.google.com">Create Account/Forgot?</a>
+            <button type="submit">Login</button>
 
+        </form>
     </body>
 </html>
