@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<html>
+    <head>
+        <title>Question 1</title>
+        <script type="text/javascript">
+
+        function check_answer(){
+            var rd1 = document.getElementById("choiceA");
+            var rd2 = document.getElementById("choiceB");
+            // alert("A is checked");
+            if(rd1.checked==true){
+                // alert("A is checked");
+                return true;
+            }
+            // else{
+            else if(rd2.checked==true){
+                // alert("B is checked");
+                return false;
+            }
+        }
+        </script>
+
+    </head>
+    <body>
+        <!-- <form onclick="return check_answer()" action="math.html" method="get"> -->
+            <div class="row">
+                <div class="column" style="background-color:white;">
+                    <ol>
+                        Given points (x1, y1) and (x2,y2) select the formula to find the equation of the given line.</br>
+                    </ol>
+                    <input type="radio" id="choiceA" name="slope" value="choiceA">
+                    <label for="choiceA"></label>
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mi>y</mi><mo>=</mo><mi>m</mi><mo>&InvisibleTimes;</mo><mi>x</mi><mo>+</mo><mi>b</mi>
+                            </mrow>
+                        </math>
+                    <br>
+                    <input type="radio" id="choiceB" name="slope" value="choiceB">
+                    <label for="choiceB"></label>
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mo>(</mo><mi>x</mi><mo>-</mo><mi>h</mi><msup><mo>)</mo><mn>2</mn></msup><mo>+</mo><mo>(</mo><mi>y</mi><mo>-</mo><mi>k</mi><msup><mo>)</mo><mi>2</mi></msup><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup>
+                            </mrow>
+                        </math>
+
+
+                    <br>
+                    <!-- <button type="submit">Login</button> -->
+                    <button onclick="return check_answer()" id="btn1" action="cosine.html">Submit</button>
+                </div>
+            </div>
+        <!-- </form> -->
+    </body>
+</html>
