@@ -30,13 +30,12 @@
             var rd4 = document.getElementById("choiceD");
 
             sessionStorage.clear();
-            sessionStorage.setItem('total_questions', '2');
+            sessionStorage.setItem('math_total_questions', '2');
             sessionStorage.setItem('math_correct', '0');
 
             if(rd1.checked==false && rd2.checked==true && rd3.checked==false && rd4.checked==false){
                 var update = parseInt(sessionStorage.getItem("math_correct")) + 1;
                 sessionStorage.setItem('math_correct', update.toString());
-                // rd2.action = "cosine.html"
             }
             return true;
         }

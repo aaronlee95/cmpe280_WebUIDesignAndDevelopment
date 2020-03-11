@@ -33,7 +33,6 @@
         if(rd1.checked==true && rd2.checked==false && rd3.checked==false && rd4.checked==false)
         {
             var update = parseInt(sessionStorage.getItem("math_correct")) + 1;
-            alert(update.toString());
             sessionStorage.setItem('math_correct', update.toString());
             rd2.action = "english.html";
         }

@@ -2,36 +2,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     <title>Score Card</title>
-    <body>
-        <form action="form_action.php">
-        <box>
+</head>
+<body onload="getResults()">
+    <form>
+    <box>
         <div style="border-style:solid;">
             <details>
-                <summary>Quantitative Section</summary>
-                <p><strong>Number of Questions Answered:</strong>2</p>
-                <p><strong>Number of Correct Answers:</strong>2</p>
-                <p><strong>Score: </strong>100</p>
+                <summary>Quantitative Section</summary><br>
+                    <div id="math_total"></div><br>
+                    <div id="math_correct"></div><br>
+                    <div id="math_score"></div>
             </details>
             <details>
-                <summary>Reading Section</summary>
-                <p><strong>Number of Questions Answered:</strong>2</p>
-                <p><strong>Number of Correct Answers:</strong>2</p>
-                <p><strong>Score: </strong>100</p>
+                <summary>Reading Section</summary><br>
+                    <div id="english_total"></div><br>
+                    <div id="english_correct"></div><br>
+                    <div id="english_score"></div>
             </details>
             <details>
-                <summary>Audio/Video Section</summary>
-                <p><strong>Number of Questions Answered:</strong>2</p>
-                <p><strong>Number of Correct Answers:</strong>2</p>
-                <p><strong>Score: </strong>100</p>
+                <summary>Audio/Video Section</summary><br>
+                    <div id="video_total"></div><br>
+                    <div id="video_correct"></div><br>
+                    <div id="video_score"></div>
             </details>
         </div>
-        </box>
-        <div>
-            <center><font size="6">Thank You!!</font></center>
-        </div>
-        <button type="submit" formaction="login.html">Finish</button>
-        </form>
-    </body>
+    </box>
+    <div>
+        <center><font size="6">Thank You!!</font></center>
+    </div>
+    <button type="submit" onclick="return when_submit()" id="rd1" formaction="login.html">Finish</button>
+    </form>
 
+    <script>
+        function getResults(){
+            document.getElementById("math_correct").innerHTML = "\<strong\>Number of Correct Answers: \</strong\>" + sessionStorage.math_correct;
+            document.getElementById("math_total").innerHTML = "\<strong\>Number of Questions Answered: \</strong\>" +sessionStorage.math_total_questions;
+            document.getElementById("math_score").innerHTML = "\<strong\>Score: \</strong\>" + (sessionStorage.math_correct/sessionStorage.math_total_questions)*100;
+            document.getElementById("english_correct").innerHTML = "\<strong\>Number of Correct Answers: \</strong\>" + sessionStorage.english_correct;
+            document.getElementById("english_total").innerHTML = "\<strong\>Number of Questions Answered: \</strong\>" +sessionStorage.english_total_questions;
+            document.getElementById("english_score").innerHTML = "\<strong\>Score: \</strong\>" + (sessionStorage.english_correct/sessionStorage.english_total_questions)*100;
+            document.getElementById("video_correct").innerHTML = "\<strong\>Number of Correct Answers: \</strong\>" + sessionStorage.video_correct;
+            document.getElementById("video_total").innerHTML = "\<strong\>Number of Questions Answered: \</strong\>" +sessionStorage.video_total_questions;
+            document.getElementById("video_score").innerHTML = "\<strong\>Score: \</strong\>" + (sessionStorage.video_correct/sessionStorage.video_total_questions)*100;
+        }
 
-</head>
+        function when_submit(){
+            alert("SCO is completed. Returning to login page.");
+            // rd1.formaction = "login.html";
+            return true;
+        }
+    </script>
+</body>
