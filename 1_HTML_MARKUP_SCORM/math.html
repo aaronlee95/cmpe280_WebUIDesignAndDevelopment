@@ -28,27 +28,28 @@
             var rd2 = document.getElementById("choiceB");
             var rd3 = document.getElementById("choiceC");
             var rd4 = document.getElementById("choiceD");
-            // alert("A is checked");
+
+            sessionStorage.clear();
+            sessionStorage.setItem('total_questions', '2');
+            sessionStorage.setItem('math_correct', '0');
+
             if(rd1.checked==false && rd2.checked==true && rd3.checked==false && rd4.checked==false){
-                rd3.action = "cosine.html"
-                return true;
+                var update = parseInt(sessionStorage.getItem("math_correct")) + 1;
+                sessionStorage.setItem('math_correct', update.toString());
+                // rd2.action = "cosine.html"
             }
-            else{
-                alert("Wrong Answer");
-                rd2.action = "math.html";
-                return false;
-            }
+            return true;
         }
         </script>
 
     </head>
     <body>
-        <form onSubmit="return check_answer()" action="cosine.html" method>
+        <form onSubmit="return check_answer()" action="cosine.html">
             <div class="row">
                 <div class="column" style="background-color:white;">
-                        <ol>
-                            Given points (x1, y1) and (x2,y2) select the formula to find the equation of the given line.</br>
-                        </ol>
+                    <ol>
+                        Given points (x1, y1) and (x2,y2) select the formula to find the equation of the given line.</br>
+                    </ol>
                     <div class="column" style="background-color:white;">
                         <input type="radio" id="choiceA" name="slope" value="choiceA">
                         <label for="choiceA"></label>
@@ -65,9 +66,11 @@
                                     <mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mi>m</mi><mo>&InvisibleTimes;</mo><mo>(</mo><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo>
                                 </mrow>
                             </math>
-                        <br>
+                        <br><br>
                         <!-- <button type="submit">Login</button> -->
-                        <button type="submit" onclick="return check_answer()" id="btn1">Submit</button>
+                        <button type="submit" onclick="return check_answer()" id="btn1">Submit & Next Question</button>
+                        <button type="submit" formaction="math.html">Cancel & Clear Selection</button></p>
+
                     </div>
 
                     <div class="column" style="background-color:white;">

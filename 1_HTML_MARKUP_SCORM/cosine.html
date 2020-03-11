@@ -21,67 +21,81 @@
 </style>
 
 <head>
-  <title>Question 2</title>
-  <body>
-    <div class="row">
-      <div class="column" style="background-color:white;">
-        <p> Select the cosine theorem formula.</p>
-          <form>
-            <div class="column" style="background-color:white;">
-                <input type="radio" name=two>
-                <label for="twoA">
-                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                        <mi>cos</mi><mo>(</mo><mo>&alpha;</mo><mo>&PlusMinus;</mo><mo>&beta;</mo><mo>)</mo><mo>=</mo><mi>cos</mi><mo>&alpha;</mo><mi>cos</mi><mo>&beta;</mo><mo>&MinusPlus;</mo><mi>sin</mi><mo>&alpha;</mo><mi>sin</mi><mo>&beta;</mo>
-                    </math>
-                </label></br>
-                <input type="radio" name=two>
-                <label for="twoB">
-                  <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>sin</mi><mo>&alpha;</mo><mo>+</mo><mi>sin</mi><mo>&beta;</mo><mo>=</mo><mn>2</mn><mo>&InvisibleTimes;</mo><mi>sin</mi><mo>(</mo>
-                    <mfrac>
-                      <mrow><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mrow><mn>2</mn>
-                    </mfrac>
-                      <mo>)</mo><mo>&InvisibleTimes;</mo><mi>cos</mi><mo>(</mo>
-                    <mfrac>
-                      <mrow><mo>&alpha;</mo><mo>-</mo><mo>&beta;</mo></mrow><mn>2</mn>
-                    </mfrac>
-                      <mo>)</mo>
-                  </math>
-                </label></br><br><br>
-                <footer>
+    <title>Question 2</title>
+    <script type="text/javascript">
 
-                    <!-- <input type="button" value="Submit & Next Question"> -->
-                    <!-- <input type="button" value="Cancel & Clear Selection"> -->
-                    <button type="submit" formaction="english.html">Submit & Next Question</button></p>
-                    <button type="submit" formaction="cosine.html">Cancel & Clear Selection</button></p>
+    function check_answer(){
+        var rd1 = document.getElementById("twoA");
+        var rd2 = document.getElementById("twoB");
+        var rd3 = document.getElementById("twoC");
+        var rd4 = document.getElementById("twoD");
 
-                </footer>
-            </div>
+        if(rd1.checked==true && rd2.checked==false && rd3.checked==false && rd4.checked==false)
+        {
+            var update = parseInt(sessionStorage.getItem("math_correct")) + 1;
+            alert(update.toString());
+            sessionStorage.setItem('math_correct', update.toString());
+            rd2.action = "english.html";
+        }
+        return true;
+    }
+    </script>
 
-            <div class="column" style="background-color:white;">
-                <label for="twoC">
-                <input type="radio" name=two>
-                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                      <mi>sin</mi><mo>(</mo><mo>&alpha;</mo><mo>&PlusMinus;</mo><mo>&beta;</mo><mo>)</mo><mo>=</mo><mi>sin</mi><mo>&alpha;</mo><mi>cos</mi><mo>&beta;</mo><mo>&PlusMinus;</mo><mi>cos</mi><mo>&alpha;</mo><mi>sin</mi><mo>&beta;</mo>
-                    </math>
-                </label></br>
-                <label for="twoD">
-                <input type="radio" name=two>
-                  <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>sin</mi><mo>&alpha;</mo><mo>-</mo><mi>sin</mi><mo>&beta;</mo><mo>=</mo><mn>2</mn><mo>&InvisibleTimes;</mo><mi>cos</mi><mo>(</mo>
-                    <mfrac>
-                        <mrow><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mrow><mn>2</mn>
-                    </mfrac>
-                    <mo>)</mo><mo>&InvisibleTimes;</mo><mi>sin</mi><mo>(</mo>
-                    <mfrac>
-                      <mrow><mo>&alpha;</mo><mo>-</mo><mo>&beta;</mo></mrow><mn>2</mn>
-                    </mfrac>
-                    <mo>)</mo>
-                  </math>
-                </label>
-            </div>
-          </form>
-      </div>
-    </div>
-  </body>
 </head>
+<body>
+    <form onSubmit="return check_answer()" action="english.html">
+    <div class="row">
+        <div class="column" style="background-color:white;">
+            <p> Select the cosine theorem formula.</p>
+                <div class="column" style="background-color:white;">
+                    <input type="radio" name="two" id="twoA" value="twoA">
+                        <label for="twoA"></label>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mi>cos</mi><mo>(</mo><mo>&alpha;</mo><mo>&PlusMinus;</mo><mo>&beta;</mo><mo>)</mo><mo>=</mo><mi>cos</mi><mo>&alpha;</mo><mi>cos</mi><mo>&beta;</mo><mo>&MinusPlus;</mo><mi>sin</mi><mo>&alpha;</mo><mi>sin</mi><mo>&beta;</mo>
+                            </math>
+                            </br>
+                    <input type="radio" name="two" id="twoB" value="twoB">
+                        <label for="twoB"></label>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mi>sin</mi><mo>&alpha;</mo><mo>+</mo><mi>sin</mi><mo>&beta;</mo><mo>=</mo><mn>2</mn><mo>&InvisibleTimes;</mo><mi>sin</mi><mo>(</mo>
+                                <mfrac>
+                                    <mrow><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                                </mfrac>
+                                <mo>)</mo><mo>&InvisibleTimes;</mo><mi>cos</mi><mo>(</mo>
+                                <mfrac>
+                                    <mrow><mo>&alpha;</mo><mo>-</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                                </mfrac>
+                                <mo>)</mo>
+                            </math>
+                        </br><br><br>
+                </div>
+
+                <div class="column" style="background-color:white;">
+                    <label for="twoC"></label>
+                    <input type="radio" name="two" id="twoC" value="twoC">
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>sin</mi><mo>(</mo><mo>&alpha;</mo><mo>&PlusMinus;</mo><mo>&beta;</mo><mo>)</mo><mo>=</mo><mi>sin</mi><mo>&alpha;</mo><mi>cos</mi><mo>&beta;</mo><mo>&PlusMinus;</mo><mi>cos</mi><mo>&alpha;</mo><mi>sin</mi><mo>&beta;</mo>
+                        </math>
+                    </br>
+                    <label for="twoD"></label>
+                    <input type="radio" name="two" id="twoD" value="twoD">
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>sin</mi><mo>&alpha;</mo><mo>-</mo><mi>sin</mi><mo>&beta;</mo><mo>=</mo><mn>2</mn><mo>&InvisibleTimes;</mo><mi>cos</mi><mo>(</mo>
+                            <mfrac>
+                                <mrow><mo>&alpha;</mo><mo>+</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                            </mfrac>
+                            <mo>)</mo><mo>&InvisibleTimes;</mo><mi>sin</mi><mo>(</mo>
+                            <mfrac>
+                                <mrow><mo>&alpha;</mo><mo>-</mo><mo>&beta;</mo></mrow><mn>2</mn>
+                            </mfrac>
+                            <mo>)</mo>
+                        </math>
+                </div>
+        </div>
+    </div>
+    <footer>
+        <button type="submit" id="btn1">Submit & Next Question</button>
+        <button type="submit" formaction="cosine.html">Cancel & Clear Selection</button>
+    </footer>
+    </form>
+</body>
