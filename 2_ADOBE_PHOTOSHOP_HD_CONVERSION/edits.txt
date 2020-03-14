@@ -1,0 +1,27 @@
+Photoshop Edits: https://www.youtube.com/watch?v=qCnRh6tr-Vc
+
+1. Image ->Image Size -> Resolution:300 -> Check Resample -> Drop Down = Preserve Details (enlargment) -> Reduce Noise = 100% -> OK
+
+Duplicate Photo
+
+2. Filter -> Noise -> Reduce Noise ->
+Strenght = 10; Preserve Details = 0; Reduce Color Noise = 0; Sharpen Details = 74% -> OK
+
+Merge Down
+Duplicate Photo
+
+3. Filter -> Sharpen -> Unsharp Mask ->
+Amount: 45%; Radius: 25% -> Threshold: 67 Levels
+
+Merge Down
+Duplicate Photo
+
+4. Filter -> Other -> High Pass -> Radius: 5.2 -> OK
+Deselect View of Layer 0 Copy and Select Layer 0
+
+Filter -> Blur -> Surface Blur-> Radius: 20 Pixels 18Threshold
+
+Select View of "layer 0 Copy'
+
+Drop Down List = OverLay
+
