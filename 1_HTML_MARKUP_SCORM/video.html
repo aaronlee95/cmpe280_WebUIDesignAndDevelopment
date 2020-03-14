@@ -1,57 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Question 4</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    *{
+        box-sizing: border-box;
+    }
 
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
+    .column{
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-<body>
-    <form action="/action_page.php">
-    <div class="row">
-      <div class="column" style="background-color:white;">
-        <ol> Watch the video and answer the following question. What is the source as mentioned in the video?</ol>
-            <div class="column" style="background-color:white;">
-                <input type="radio" id="NASA" name="mark" value="NASA.gov">
-                <label for="NASA.gov">NASA.gov</label><br>
-                <input type="radio" id="Facebook" name="mark" value="Facebook">
-                <label for="Facebook">Facebook</label><br>
+    .row:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    </style>
+    <head>
+        <title>Question 4</title>
+        <script type="text/javascript">
+            function check_answer()
+            {
+                var rd1 = document.getElementById("option1");
+                var rd2 = document.getElementById("option2");
+                var rd3 = document.getElementById("option3");
+                var rd4 = document.getElementById("option4");
+
+                sessionStorage.setItem('video_total_questions', '1');
+                sessionStorage.setItem('video_correct', '0');
+
+                if(rd1.checked==true && rd2.checked==false && rd3.checked==false && rd4.checked==false)
+                {
+                    var update = parseInt(sessionStorage.getItem("video_correct")) + 1;
+                    sessionStorage.setItem('video_correct', update.toString());
+                }
+                return true;
+
+
+            }
+        </script>
+    </head>
+    <body>
+        <form onSubmit="return check_answer()" action="survey.html">
+            <div class="row">
+                <div class="column" style="background-color:white;">
+                    <ol> Watch the video and answer the following question. What is the source as mentioned in the video?</ol>
+                    <div class="column" style="background-color:white;">
+                        <input type="radio" id="option1" name="mark" value="NASA.gov">
+                        <label for="NASA.gov">NASA.gov</label><br>
+                        <input type="radio" id="option2" name="mark" value="Facebook">
+                        <label for="Facebook">Facebook</label><br>
+                    </div>
+
+                    <div class="column" style="background-color:white;">
+                        <input type="radio" id="option3" name="mark" value="Data.gov">
+                        <label for="data">Data.gov</label><br>
+                        <input type="radio" id="option4" name="mark" value="xyz">
+                        <label for="xyz">XYZ.net</label><br>
+                    </div>
+
+                </div>
+
+                <div class="column" style="background-color:white;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ilifg26TZrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <h3><strong>Apollo 13 Views of the Moon in 4K</strong></h3>
+
+                    <p>Source: <a href="http://www.nasa.gov/multimedia/videogallery/index.html" target="_blank">http://www.nasa.gov/multimedia/videogallery/index.html#.VBFB5S5dVOE</a></p>
+                </div>
             </div>
-
-            <div class="column" style="background-color:white;">
-                <input type="radio" id="data" name="mark" value="Data.gov">
-                <label for="data">Data.gov</label><br>
-                <input type="radio" id="xyz" name="mark" value="xyz">
-                <label for="xyz">XYZ.net</label><br>
-            </div>
-
-      </div>
-      <div class="column" style="background-color:white;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ilifg26TZrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h3><strong>Apollo 13 Views of the Moon in 4K</strong></h3>
-        <p>Source: <a href="http://www.nasa.gov/multimedia/videogallery/index.html" target="_blank">http://www.nasa.gov/multimedia/videogallery/index.html#.VBFB5S5dVOE</a></p>
-      </div>
-    </div>
-    <footer>
-        <button type = "submit" formaction="survey.html">Submit & Next Question</button>
-        <button type = "submit" formaction="video.html">Cancel & Clear Selection</button>
-    </footer>
-  </form>
-</body>
+            <footer>
+                <button type = "submit">Submit & Next Question</button>
+                <button type = "submit" formaction="video.html">Cancel & Clear Selection</button>
+            </footer>
+        </form>
+    </body>
 </html>

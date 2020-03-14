@@ -18,103 +18,117 @@
 }
 </style>
 
-<head>
-    <title>Question 1</title>
-</script>
-</head>
-<body>
-    <div class="row">
-        <div class="column" style="background-color:white;">
-            <ol>
-                Given points (x1, y1) and (x2,y2) select the formula to find the equation of the given line.
-                </br>
-                <form>
+<html>
+    <head>
+        <title>Question 1</title>
+        <script type="text/javascript">
+
+        function check_answer(){
+            var rd1 = document.getElementById("choiceA");
+            var rd2 = document.getElementById("choiceB");
+            var rd3 = document.getElementById("choiceC");
+            var rd4 = document.getElementById("choiceD");
+
+            sessionStorage.clear();
+            sessionStorage.setItem('math_total_questions', '2');
+            sessionStorage.setItem('math_correct', '0');
+
+            if(rd1.checked==false && rd2.checked==true && rd3.checked==false && rd4.checked==false){
+                var update = parseInt(sessionStorage.getItem("math_correct")) + 1;
+                sessionStorage.setItem('math_correct', update.toString());
+            }
+            return true;
+        }
+        </script>
+
+    </head>
+    <body>
+        <form onSubmit="return check_answer()" action="cosine.html">
+            <div class="row">
+                <div class="column" style="background-color:white;">
+                    <ol>
+                        Given points (x1, y1) and (x2,y2) select the formula to find the equation of the given line.</br>
+                    </ol>
                     <div class="column" style="background-color:white;">
-                        <input type="radio" name="choiceA">
-                        <label for="choiceA">
+                        <input type="radio" id="choiceA" name="slope" value="choiceA">
+                        <label for="choiceA"></label>
                             <math xmlns="http://www.w3.org/1998/Math/MathML">
                                 <mrow>
                                     <mi>y</mi><mo>=</mo><mi>m</mi><mo>&InvisibleTimes;</mo><mi>x</mi><mo>+</mo><mi>b</mi>
                                 </mrow>
-                        </label>
+                            </math>
                         <br>
-                        <input type="radio" name="choiceB">
-                            <label for="choiceB">
-                                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                    <mrow>
-                                        <mo>(</mo><mi>x</mi><mo>-</mo><mi>h</mi><msup><mo>)</mo><mn>2</mn></msup><mo>+</mo><mo>(</mo><mi>y</mi><mo>-</mo><mi>k</mi><msup><mo>)</mo><mi>2</mi></msup><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup>
-                                    </mrow>
-                                </math>
-                            </label>
-                    </div>
-
-                    <div class="column" style="background-color:white;">
-                        <input type="radio" name = choiceC>
-                        <label for="choiceC">
+                        <input type="radio" id="choiceB" name="slope" value="choiceB">
+                        <label for="choiceB"></label>
                             <math xmlns="http://www.w3.org/1998/Math/MathML">
                                 <mrow>
                                     <mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mi>m</mi><mo>&InvisibleTimes;</mo><mo>(</mo><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo>
                                 </mrow>
                             </math>
-                        </label></br>
-                        <input type="radio" name = choiceD>
-                        <label for="choiceD">
+                        <br><br>
+                        <!-- <button type="submit">Login</button> -->
+                        <button type="submit" onclick="return check_answer()" id="btn1">Submit & Next Question</button>
+                        <button type="submit" formaction="math.html">Cancel & Clear Selection</button></p>
+
+                    </div>
+
+                    <div class="column" style="background-color:white;">
+                        <input type="radio" id="choiceC" name = "slope" value="choiceC">
+                        <label for="choiceC"></label>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mo>(</mo><mi>x</mi><mo>-</mo><mi>h</mi><msup><mo>)</mo><mn>2</mn></msup><mo>+</mo><mo>(</mo><mi>y</mi><mo>-</mo><mi>k</mi><msup><mo>)</mo><mi>2</mi></msup><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup>
+                                </mrow>
+                            </math>
+                        <br>
+
+                        <input type="radio" id="choiceD" name = "slope" value="choiceD">
+                        <label for="choiceD"></label>
                             <math xmlns="http://www.w3.org/1998/Math/MathML">
                                 <mrow>
                                     <mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo>
                                             <mfrac><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>-</mo><msub><mi>y</mi><mn>1</mn></mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>-</mo><msub><mi>x</mi><mn>1</mn></mrow></mfrac><mo>&InvisibleTimes;</mo><mo>(</mo><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo>
                                 </mrow>
                             </math>
-                        </label>
-                    </div><br><br>
-                        <footer>
-                            <br><br>
-                            <button type="submit" formaction="cosine.html">Submit & Next Question</button>
-                            <button type="submit" formaction="math.html">Cancel & Clear Selection</button>
-                        </footer>
-                    </body>
-                </form>
-            </ol>
-        </div>
-        <div class="column" style="background-color:white;">
-
-          <script type="text/javascript">
-          window.onload = function()
-          {
-            var chart = new CanvasJS.Chart("chartContainer",
-            {
-               axisX:{
-                minimum: 0,
-                maximum: 100,
-                labelFontColor: "transparent"
-               },
-               axisY:{
-                maximum: 100,
-                labelFontColor: "transparent",
-                gridThickness: 0
-               },
-               data: [
-                  {
-                    type: "line",
-                    // indexLabel: "{x},{y}",
-                    indexLabel: "{lab_x},{lab_y}",
-                    dataPoints: [
-                    { x: 0, y: 0},
-                    { x: 30, y: 30, lab_x: "x1", lab_y: "y1"},
-                    { x: 70, y: 70, lab_x: "x2", lab_y: "y2" },
-                    { x: 100, y: 100},
-                    ]
-                  }
-              ]
-            });
-
-            chart.render();
-          }
-          </script>
-         <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
-        <body>
-          <div id="chartContainer" style="height: 300px; width: 60%;">
-          </div>
-        </div>
-    </div>
+                    </div>
+                </div>
+                <div class="column" style="background-color:white;">
+                    <script type="text/javascript">
+                    window.onload = function()
+                    {
+                        var chart = new CanvasJS.Chart("chartContainer",
+                        {
+                            axisX:{
+                                minimum: 0,
+                                maximum: 100,
+                                labelFontColor: "transparent"
+                            },
+                            axisY:{
+                                maximum: 100,
+                                labelFontColor: "transparent",
+                                gridThickness: 0
+                            },
+                            data:
+                            [{
+                                type: "line",
+                                // indexLabel: "{x},{y}",
+                                indexLabel: "{lab_x},{lab_y}",
+                                dataPoints: [
+                                    { x: 0, y: 0},
+                                    { x: 30, y: 30, lab_x: "x1", lab_y: "y1"},
+                                    { x: 70, y: 70, lab_x: "x2", lab_y: "y2" },
+                                    { x: 100, y: 100},
+                                ]
+                            }]
+                        });
+                        chart.render();
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+                    <div id="chartContainer" style="height: 300px; width: 60%;"></div>
+                </div>
+                </div>
+            </div>
+        </form>
+    </body>
 </html>
