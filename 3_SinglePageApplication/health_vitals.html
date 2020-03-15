@@ -1,0 +1,61 @@
+<main>
+  <div id="demo">
+    <!-- Height -->
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="height"><strong>Height: </strong></label>
+        <input type="text" class="form-control" id="height" placeholder="Height (in inches)">
+      </div>
+    </form><br>
+    <!-- Weight -->
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="weight"><strong>Last Name: </strong></label>
+        <input type="text" class="form-control" id="weight" placeholder="Enter Weight (in pounds)">
+      </div>
+    </form><br>
+    <!-- Temperature -->
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="temp"><strong>Body Temperature: : </strong></label>
+        <input type="text" class="form-control" id="temp" placeholder="Enter Temperature (in degrees Farenheit)">
+      </div>
+    </form><br>
+    <!-- Pulse Rate -->
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="pulse"><strong>Pulse Rate: </strong></label>
+        <input type="text" class="form-control" id="pulse" placeholder="Pulse">
+      </div>
+    </form><br>
+    <!-- Blood Pressure -->
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="blood_pressure"><strong>Blood Pressure: </strong></label>
+        <input type="text" class="form-control" id="blood_pressure" placeholder="Pulse">
+      </div>
+    </form><br>
+
+
+
+    <!-- Medication -->
+    <form>
+      <div class="form-group">
+        <label for="meds"><strong>Medications:</strong></label><br>
+        <textarea id="meds" rows="8" cols="40">
+        </textarea>
+      </div>
+    </form>
+
+    <!-- Notes -->
+    <form>
+      <div class="form-group">
+        <label for="Notes"><strong>Notes:</strong></label><br>
+        <textarea id="Notes" rows="8" cols="40">
+        </textarea>
+      </div>
+    </form>
+
+    <button type="button" class="btn btn-success btn-lg" id="save" onclick="save_data()">Save</button>
+  </div>
+</main>
