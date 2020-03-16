@@ -37,6 +37,10 @@ function navigate(){
   // setActiveLink(fragmentID);
 };
 
+if(!location.hash){
+  location.hash = "home"
+}
+
 navigate();
 window.addEventListener("hashchange", navigate);
 
