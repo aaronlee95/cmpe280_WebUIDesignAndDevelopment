@@ -8,7 +8,6 @@
       <style>
         #navbar a {
           color: white;
-
         }
         #home a {
           color: black;
@@ -22,7 +21,6 @@
           height: 80px;
           display: block;
 /**/        display: block;
-            color: white;
             text-align: right;
             padding: 14px 16px;
             text-decoration: none;
@@ -47,5 +45,46 @@
       <div id="content"></div>
     </main>
     <script src="main.js"></script>
+    <script>
+    // Create WebSQL Database
+    // var db = openDatabase("Health Camp","0.1","Health Camp",655356);
+
+ var db;
+ var shortName='MyMobileApp';
+ var version='0.1';
+ var displayName='MyMobileApp';
+ var maxSize = 65536;
+ db = openDatabase(shortName,version,displayName,maxSize);
+
+
+
+
+
+
+
+
+    // db.transaction(function(transaction){
+    //   transaction.executeSql('CREATE TABLE IF NOT EXISTS health_report ' + ' (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' + ' name TEXT NOT NULL, age INTEGER NOT NULL, gender TEXT NOT NULL, photo, medication TEXT, notes TEXT);');
+    // });
+     db.transaction(
+    function(transaction) {
+      // Note: if you needed to create a second, different table you could copy the transaction.executeSql command below
+    //  but when you paste it keep it inside the function(transaction) method
+
+    //If you make a mistake when creating the table, you need to drop it.  Uncomment and modify the line below if you need to do that
+    transaction.executeSql('DROP TABLE customer',null,function(){console.log('Drop Succeeded');},function(){console.log('Drop Failed');});
+
+    transaction.executeSql(
+            'CREATE TABLE IF NOT EXISTS customer ' +
+      ' (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
+      ' name TEXT NOT NULL, age TEXT NOT NULL, gender TEXT NOT NULL, notes TEXT);'
+    );
+  }
+ ); // END transaction()
+
+
+</script>
+
+
   </body>
 </html>
