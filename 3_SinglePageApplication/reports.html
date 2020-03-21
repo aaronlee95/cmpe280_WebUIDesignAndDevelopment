@@ -20,6 +20,7 @@
             str += "<td>" + results.rows.item(i).age + "</td>";
             str += "<td>" + results.rows.item(i).gender + "</td>";
             str += "<td>" + results.rows.item(i).notes + "</td>";
+            str += "<td>" + results.rows.item(i).id + "</td>";
             str += "</tr>";
             document.getElementById("health_report").innerHTML += str;
             str = '';
@@ -50,10 +51,14 @@
   <body><br><br>
     <table class="TFtable" id="health_report" cellpadding="25px" border="1px">
           <tr>
-            <th colspan="5" style="text-align: left">Patient Details</th>
+            <th colspan="6" style="text-align: left">Patient Details</th>
           </tr>
 
           <tr>
+            <td id="_id">
+              ID
+            </td>
+
             <td id="_name">
               Name
             </td>

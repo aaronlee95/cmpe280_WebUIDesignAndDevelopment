@@ -88,6 +88,7 @@ function displayTable(){
       var str = '';
       for (i = 0; i < len; i++) {
         str += "<tr>";
+        str += "<td>" + results.rows.item(i).id + "</td>";
         str += "<td>" + results.rows.item(i).name + "</td>";
         str += "<td>" + results.rows.item(i).age + "</td>";
         str += "<td>" + results.rows.item(i).gender + "</td>";
