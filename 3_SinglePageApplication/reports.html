@@ -1,88 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!-- <html>
-  <head>
-    <style>
-      table {
-        width:80%;
-      }
-      table, th, td {
-        border: 1px solid grey;
-        border-collapse: collapse;
-      }
-      th, td {
-        padding: 15px;
-        text-align: center;
-      }
-      table#t01 tr:nth-child(even) {
-        background-color: #e6e6e6;
-      }
-      table#t01 tr:nth-child(odd) {
-       background-color: #bfbfbf;
-      }
-      table#t01 th:nth-child(odd) {
-        background-color: #006699;
-        color: black;
-      }
-      table#t01 th:nth-child(even) {
-        background-color: #006699;
-        color: black;
-      }
-      #banner{
-        text-align: center;
-      }
-
-
-    </style>
-  </head>
-<body><br>
-
-
-<table id="t01">
-  <tr id="banner">
-    <th colspan="5">Patient Details</th>
-  </tr>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Gender</th>
-    <th>Medications</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-    <td>test</td>
-    <td>test</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-    <td>test</td>
-    <td>test</td>
-
-  </tr>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-    <td>80</td>
-    <td>test</td>
-    <td>test</td>
-
-  </tr>
-</table>
-
-</body>
-</html>
-
- -->
-
-<!-- ///////////////////////////////////////////////////////////// -->
-
-
-
   <head>
     <script>
       var db = openDatabase('Health Camp','0.1','Health Camp',65536);
@@ -109,57 +26,48 @@
             }}, null);
 
     </script>
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-<!--   <style>
-    table {
-      width:80%;
-    }
-    table, th, td {
-      border: 1px solid grey;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 15px;
-      text-align: center;
-    }
-    table#t01 tr:nth-child(even) {
-      background-color: #e6e6e6;
-    }
-    table#t01 tr:nth-child(odd) {
-     background-color: #bfbfbf;
-    }
-    table#t01 th:nth-child(odd) {
-      background-color: #006699;
-      color: black;
-    }
-    table#t01 th:nth-child(even) {
-      background-color: #006699;
-      color: black;
-    }
-    #banner{
-      text-align: center;
-    }
-  </style>
- -->
-<!-- //////////////////////////////////////////////////////////////////////////// -->
+    <style>
+      table {
+        width:60%;
+        border-collapse: collapse;
+        border: 3px solid black;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #000;
+        text-transform: uppercase;
+        background: white;
+      }
+      th, td {
+        padding: 8px;
+        text-align: center;
+      }
+      tr:nth-child(even){
+        background: lightgrey;
+      }
+
+    </style>
   </head>
   <body><br><br>
-    <table id="health_report" cellpadding="25px" border="1px">
-        <tr style="background-color:#006699;color:black;font-size=17px">
+    <table class="TFtable" id="health_report" cellpadding="25px" border="1px">
+          <tr>
+            <th colspan="5" style="text-align: left">Patient Details</th>
+          </tr>
+
+          <tr>
             <td id="_name">
-              <h6>Name</h6>
+              Name
             </td>
             <td id="_age">
-              <h6>Age</h6>
+              Age
             </td>
             <td id="_gender">
-              <h6>Gender</h6>
+              Gender
             </td>
             <td id="_meds">
-              <h6>Medications</h6>
+              Medications
             </td>
             <td id="_notes">
-              <h6>Notes</h6>
+              Notes
             </td>
         </tr>
     </table>

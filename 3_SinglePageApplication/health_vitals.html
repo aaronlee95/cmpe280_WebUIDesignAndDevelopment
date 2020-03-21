@@ -1,41 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        color:white;
+      }
+      label{
+          display: block;
+          width: 150px;
+          text-align: right;
+          padding-right: 20px;
+        }
+      input{
+        display: block;
+        text-align: left;
+        width: 200px;
+      }
+
+      textarea{
+         display: block;
+        text-align: left;
+        width: 200px;
+      }
+
+      #demo{
+        width: 500px;
+        margin: 0 auto;
+      }
+
+      button{
+        display: block;
+        text-align: left;
+        width: 150px;
+        padding: 200px;
+      }
+    </style>
+  </head>
 <br><main>
   <div id="demo">
     <!-- Height -->
     <form class="form-inline">
-        <label for="height"><strong>Height: </strong></label>
+        <label for="height">Height: </label>
         <input type="text" class="form-control" id="height" placeholder="Height (in inches)">
     </form><br>
     <!-- Weight -->
     <form class="form-inline">
-        <label for="weight"><strong>Weight: </strong></label>
+        <label for="weight">Weight: </label>
         <input type="text" class="form-control" id="weight" placeholder="Enter Weight (in pounds)">
     </form><br>
     <!-- Temperature -->
     <form class="form-inline">
-        <label for="temp"><strong>Body Temperature: </strong></label>
+        <label for="temp">Body Temperature: </label>
         <input type="text" class="form-control" id="temp" placeholder="Enter Temperature (in degrees Farenheit)">
     </form><br>
     <!-- Pulse Rate -->
     <form class="form-inline">
-        <label for="pulse"><strong>Pulse Rate: </strong></label>
+        <label for="pulse">Pulse Rate: </label>
         <input type="text" class="form-control" id="pulse" placeholder="Enter pulse (in bpm)">
     </form><br>
     <!-- Blood Pressure -->
     <form class="form-inline">
-        <label for="blood_pressure"><strong>Blood Pressure: </strong></label>
+        <label for="blood_pressure">Blood Pressure: </label>
         <input type="text" class="form-control" id="blood_pressure" placeholder="Enter blood pressure (in Hg)">
     </form><br>
 
     <!-- Medication -->
     <form>
-        <label for="meds"><strong>Medications:</strong></label><br>
+        <label for="meds">Medications:</label><br>
         <textarea id="meds" rows="8" cols="40">
         </textarea>
     </form>
 
     <!-- Notes -->
     <form>
-        <label for="Notes"><strong>Notes:</strong></label><br>
+        <label for="Notes">Notes:</label><br>
         <textarea id="notes" rows="8" cols="40">
         </textarea>
     </form>
