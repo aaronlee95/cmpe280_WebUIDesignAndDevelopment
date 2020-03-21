@@ -9,24 +9,6 @@ function getContent(fragmentID, callback){
   request.send(null);
 }
 
-// function setActiveLink(fragmentID){
-//   navbarDiv = document.getElementById("navbar");
-//   links = navbarDiv.children;
-//   // var i, link, pageName;
-
-//   for(i=0; i < links.length; i++){
-//     link = links[i];
-//     // pageName = link.getAttribute("href").substr(1);
-//     if(pageName == fragmentID){
-//       console.log("setting to active: " + pageName);
-//       link.setAttribute("class", "active");
-//     }
-//     else{
-//       llink.removeAttribute("class");
-//     }
-//   }
-// }
-
 function get_frag_id(){
   return location.hash.substr(1);
 }
@@ -38,23 +20,24 @@ function navigate(){
   console.log(fragmentID);
   getContent(fragmentID, function(content){
     contentDiv.innerHTML=content;
+
+  if(fragmentID == "reports"){
+    displayTable();
+  }
   });
-  // setActiveLink(fragmentID);
 };
 
 function save_data(){
   // var db = openDatabase("Health Camp","0.1","Health Camp",655356);
 
  var db;
- var shortName='MyMobileApp';
+ // var shortName='MyMobileApp';
+ var shortName='Health Camp';
  var version='0.1';
- var displayName='MyMobileApp';
+ var displayName='Health Camp';
+ // var displayName='MyMobileApp';
  var maxSize = 65536;
  db = openDatabase(shortName,version,displayName,maxSize);
-
- var medication = "";
-
-
 
   console.log("trying to save data");
   var id = get_frag_id();
@@ -64,6 +47,7 @@ function save_data(){
     var age = document.getElementById("age").value;
     var notes = document.getElementById("notes").value;
     var gender = document.getElementById("gender").value.toLowerCase();
+    var medications = "N/A";
 
     if((age < 0) || (age > 150) || (age == "")){
       alert("Enter age between 0 and 150");
@@ -71,49 +55,63 @@ function save_data(){
       return false;
     }
 
-    // if(name != null && gender != null && age != null)
+    if(!notes){
+      notes="N/A";
+    }
+
     if(name && gender && age )
     {
-      // db.transaction(
-      //   function(transaction){
-      //     transaction.executeSql('INSERT INTO health_report (name,age,gender,notes) VALUES (?,?,?,?);',[name,age,gender,notes], null, errorHandler);
-      //   });
-
     db.transaction(function(transaction)
     {
       transaction.executeSql(
-        'INSERT INTO customer (name,age,gender,notes) VALUES (?,?,?,?);', [name,age,gender,notes], null, errorHandler);
-  }
- ); // END transaction()
-
-
-
-
-      console.log("name: " + name )
-      console.log("age: " + age )
-      console.log("gender: " + gender )
-      console.log("notes: " + notes )
+        'INSERT INTO patients (name,age,gender,medications,notes) VALUES (?,?,?,?,?);', [name,age,gender,medications,notes], null, errorHandler);
+  });
       return true;
     }
   }
   else if(id == "health_vitals"){
-    console.log("Inside: " + id);
-
     var height = document.getElementById("height").value;
     var weight = document.getElementById("weight").value;
     var temp = document.getElementById("temp").value;
     var pulse = document.getElementById("pulse").value;
     var blood = document.getElementById("blood_pressure").value;
-    var medications = document.getElementById("meds").value;
+    medications = document.getElementById("meds").value;
     var notes = document.getElementByIdByID("notes").value;
   }
 };
 
 // This function here is used to write out any errors I get to the console.
 function errorHandler(transaction, error) {
-  console.log('Oops. Error was '+error.message+' (Code '+error.code+')');
+  console.log('Oops. Error was '+ error.message+' (Code '+error.code+')');
   return true;
 }
+
+function displayTable(){
+  var db;
+  var shortName='Health Camp';
+  var version='0.1';
+  var displayName='Health Camp';
+  var maxSize = 65536;
+  db = openDatabase(shortName,version,displayName,maxSize);
+
+  db.transaction(function(tx){
+    tx.executeSql('SELECT * FROM patients', [], function (tx, results){
+      var len = results.rows.length, i;
+      var str = '';
+      for (i = 0; i < len; i++) {
+        str += "<tr>";
+        str += "<td>" + results.rows.item(i).name + "</td>";
+        str += "<td>" + results.rows.item(i).age + "</td>";
+        str += "<td>" + results.rows.item(i).gender + "</td>";
+        str += "<td>" + results.rows.item(i).medications + "</td>";
+        str += "<td>" + results.rows.item(i).notes + "</td>";
+        str += "</tr>";
+        document.getElementById("health_report").innerHTML += str;
+        str = '';
+        }}, null);
+    });
+
+  };
 
 if(!location.hash){
   location.hash = "home"

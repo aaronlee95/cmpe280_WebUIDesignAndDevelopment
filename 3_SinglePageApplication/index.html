@@ -50,19 +50,11 @@
     // var db = openDatabase("Health Camp","0.1","Health Camp",655356);
 
  var db;
- var shortName='MyMobileApp';
+ var shortName='Health Camp';
  var version='0.1';
- var displayName='MyMobileApp';
+ var displayName='Health Camp';
  var maxSize = 65536;
  db = openDatabase(shortName,version,displayName,maxSize);
-
-
-
-
-
-
-
-
     // db.transaction(function(transaction){
     //   transaction.executeSql('CREATE TABLE IF NOT EXISTS health_report ' + ' (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' + ' name TEXT NOT NULL, age INTEGER NOT NULL, gender TEXT NOT NULL, photo, medication TEXT, notes TEXT);');
     // });
@@ -72,12 +64,12 @@
     //  but when you paste it keep it inside the function(transaction) method
 
     //If you make a mistake when creating the table, you need to drop it.  Uncomment and modify the line below if you need to do that
-    transaction.executeSql('DROP TABLE customer',null,function(){console.log('Drop Succeeded');},function(){console.log('Drop Failed');});
+    transaction.executeSql('DROP TABLE patients',null,function(){console.log('Drop Succeeded');},function(){console.log('Drop Failed');});
 
     transaction.executeSql(
-            'CREATE TABLE IF NOT EXISTS customer ' +
+            'CREATE TABLE IF NOT EXISTS patients ' +
       ' (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
-      ' name TEXT NOT NULL, age TEXT NOT NULL, gender TEXT NOT NULL, notes TEXT);'
+      ' name TEXT NOT NULL, age TEXT NOT NULL, gender TEXT NOT NULL, medications TEXT, notes TEXT);'
     );
   }
  ); // END transaction()
