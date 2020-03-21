@@ -9,11 +9,12 @@ function getContent(fragmentID, callback){
   request.send(null);
 }
 
+// Return hash of each page
 function get_frag_id(){
   return location.hash.substr(1);
 }
 
-
+// Function to move to a specific page on click
 function navigate(){
   var contentDiv = document.getElementById("content");
   var fragmentID = get_frag_id();
@@ -27,17 +28,9 @@ function navigate(){
   });
 };
 
+// Save Data to WebSQL whel button is clicked on Demographics and Health Vitals Page
 function save_data(){
-  // var db = openDatabase("Health Camp","0.1","Health Camp",655356);
-
- var db;
- // var shortName='MyMobileApp';
- var shortName='Health Camp';
- var version='0.1';
- var displayName='Health Camp';
- // var displayName='MyMobileApp';
- var maxSize = 65536;
- db = openDatabase(shortName,version,displayName,maxSize);
+  db = openDatabase('Health Camp','0.1','Health Camp',65536);
 
   console.log("trying to save data");
   var id = get_frag_id();
@@ -80,19 +73,14 @@ function save_data(){
   }
 };
 
-// This function here is used to write out any errors I get to the console.
 function errorHandler(transaction, error) {
   console.log('Oops. Error was '+ error.message+' (Code '+error.code+')');
   return true;
 }
 
+//Get Data from WebSQL db and display when choosing 'reports' page
 function displayTable(){
-  var db;
-  var shortName='Health Camp';
-  var version='0.1';
-  var displayName='Health Camp';
-  var maxSize = 65536;
-  db = openDatabase(shortName,version,displayName,maxSize);
+ db = openDatabase('Health Camp','0.1','Health Camp',65536);
 
   db.transaction(function(tx){
     tx.executeSql('SELECT * FROM patients', [], function (tx, results){

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <!-- <html>
   <head>
     <style>
@@ -82,37 +83,32 @@
 
 
 
-<head>
-  <script>
-    var db;
-    var shortName='Health Camp';
-    var version='0.1';
-    var displayName='Health Camp';
-    var maxSize = 65536;
-    db = openDatabase(shortName,version,displayName,maxSize);
+  <head>
+    <script>
+      var db = openDatabase('Health Camp','0.1','Health Camp',65536);
 
-    transaction.executeSql(
-      'CREATE TABLE IF NOT EXISTS patients ' +
-      ' (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
-      ' name TEXT NOT NULL, age TEXT NOT NULL, gender TEXT NOT NULL, notes TEXT);'
-    );
+      transaction.executeSql(
+        'CREATE TABLE IF NOT EXISTS patients ' +
+        ' (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
+        ' name TEXT NOT NULL, age TEXT NOT NULL, gender TEXT NOT NULL, notes TEXT);'
+      );
 
-    db.transaction(function(tx){
-      tx.executeSql('SELECT * FROM patients', [], function (tx, results){
-        var len = results.rows.length;
-        var str = '';
-        for (i = 0; i < len; i++) {
-          str += "<tr>";
-          str += "<td>" + results.rows.item(i).name + "</td>";
-          str += "<td>" + results.rows.item(i).age + "</td>";
-          str += "<td>" + results.rows.item(i).gender + "</td>";
-          str += "<td>" + results.rows.item(i).notes + "</td>";
-          str += "</tr>";
-          document.getElementById("health_report").innerHTML += str;
-          str = '';
-          }}, null);
+      db.transaction(function(tx){
+        tx.executeSql('SELECT * FROM patients', [], function (tx, results){
+          var len = results.rows.length;
+          var str = '';
+          for (i = 0; i < len; i++) {
+            str += "<tr>";
+            str += "<td>" + results.rows.item(i).name + "</td>";
+            str += "<td>" + results.rows.item(i).age + "</td>";
+            str += "<td>" + results.rows.item(i).gender + "</td>";
+            str += "<td>" + results.rows.item(i).notes + "</td>";
+            str += "</tr>";
+            document.getElementById("health_report").innerHTML += str;
+            str = '';
+            }}, null);
 
-  </script>
+    </script>
   <!-- ////////////////////////////////////////////////////////////////////////// -->
 <!--   <style>
     table {
@@ -146,25 +142,26 @@
   </style>
  -->
 <!-- //////////////////////////////////////////////////////////////////////////// -->
-</head>
-  <body><br>
-  <table id="health_report" cellpadding="25px" border="1px">
-      <tr style="background-color:#006699;color:black;font-size=17px">
-          <td id="_name">
-            Name
-          </td>
-          <td id="_age">
-            Age
-          </td>
-          <td id="_gender">
-            Gender
-          </td>
-          <td id="_meds">
-            Medications
-          </td>
-          <td id="_notes">
-            Notes
-          </td>
-      </tr>
-  </table>
-</body>
+  </head>
+  <body><br><br>
+    <table id="health_report" cellpadding="25px" border="1px">
+        <tr style="background-color:#006699;color:black;font-size=17px">
+            <td id="_name">
+              <h6>Name</h6>
+            </td>
+            <td id="_age">
+              <h6>Age</h6>
+            </td>
+            <td id="_gender">
+              <h6>Gender</h6>
+            </td>
+            <td id="_meds">
+              <h6>Medications</h6>
+            </td>
+            <td id="_notes">
+              <h6>Notes</h6>
+            </td>
+        </tr>
+    </table>
+  </body>
+</html>
