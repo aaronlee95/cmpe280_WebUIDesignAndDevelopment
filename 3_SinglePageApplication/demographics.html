@@ -10,26 +10,46 @@
         display: block;
         width: 150px;
         text-align: right;
-        padding-right: 20px;
+        /*padding-right: 10px;*/
       }
       input{
         display: block;
         text-align: left;
-        width: 200px;
+        width: 300px;
+        margin-left: 10px;
       }
 
       #demo{
-        width: 500px;
+        width: 900px;
         margin: 0 auto;
       }
 
       button{
-        display: block;
-        text-align: left;
-        width: 150px;
-        padding: 200px;
+        display:;
+        width: 200px;
+        align-items: center;
+        /*padding: 200px;*/
+      }
+      .row{
+        display: flex;
+      }
+      .column{
+        width: 450px;
+        padding:10px;
+        float: left;
+        height: 450px;
       }
 
+      .border-right{
+        border-right: 5px solid white;
+      }
+
+      img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
 
 
     </style>
@@ -37,32 +57,39 @@
 
   <body>
     <div id="demo"><br>
-        <!-- First Name -->
-        <form class="form-inline">
-            <label for="first_name">First Name: </label>
-            <input type="text" class="form-control" id="first_name" placeholder="Enter First Name">
-        </form><br>
-        <!-- Last Name -->
-        <form class="form-inline">
-            <label for="last_name">Last Name: </label>
-            <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name">
-        </form><br>
-        <!-- Gender -->
-        <form class="form-inline">
-            <label for="gender">Gender: </label>
-            <input type = "text" id="gender" class="form-control" placeholder="Male/Female">
-        </form><br>
-        <!-- Age -->
-        <form class="form-inline">
-            <label for="age">Age: </label>
-            <input type="text" class="form-control" id="age" placeholder="Enter Age">
-        </form><br>
-        <!-- Notes -->
-        <form class="form-inline">
-            <label for="notes">Notes or Other Details: </label>
-            <input type="text" class="form-control" id="notes" placeholder="Optional">
-        </form><br>
-      <button type="button" class="btn btn-success btn-lg" id="save" onclick="return save_data()" action="health_vitals.html"><strong>Save</strong></button>
+      <div class="row">
+        <div class="column border-right">
+          <!-- First Name -->
+          <form class="form-inline">
+              <label for="first_name">First Name: </label>
+              <input type="text" class="form-control" id="first_name" placeholder="Enter First Name">
+          </form><br>
+          <!-- Last Name -->
+          <form class="form-inline">
+              <label for="last_name">Last Name: </label>
+              <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name">
+          </form><br>
+          <!-- Gender -->
+          <form class="form-inline">
+              <label for="gender">Gender: </label>
+              <input type = "text" id="gender" class="form-control" placeholder="Male/Female">
+          </form><br>
+          <!-- Age -->
+          <form class="form-inline">
+              <label for="age">Age: </label>
+              <input type="text" class="form-control" id="age" placeholder="Enter Age">
+          </form><br>
+          <!-- Notes -->
+          <form class="form-inline">
+              <label for="notes">Notes or Other Details: </label>
+              <input type="text" class="form-control" id="notes" placeholder="Optional">
+          </form><br>
+        <button type="button" class="btn btn-success btn-lg" id="save" onclick="return save_data()" action="health_vitals.html" style="margin-left: 175px"><strong>Save</strong></button>
+      </div>
+      <div class="column">
+        <img src="upload_pic.jpg"><br>
+        <input type="file" id="img" name="img_submit" accept="image/*" style="margin-left: 150px">
+      </div>
     </div>
   </body>
 </html>

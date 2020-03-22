@@ -78,7 +78,7 @@ function errorHandler(transaction, error) {
   return true;
 }
 
-//Get Data from WebSQL db and display when choosing 'reports' page
+//Get Data from WebSQL db and display when 'reports' page is selected
 function displayTable(){
  db = openDatabase('Health Camp','0.1','Health Camp',65536);
 
