@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var db = openDatabase('Health Camp','0.1','Health Camp',65536);
+
+      transaction.executeSql(
+        'CREATE TABLE IF NOT EXISTS patients ' +
+        ' (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
+        ' name TEXT NOT NULL, age TEXT NOT NULL, gender TEXT NOT NULL, notes TEXT);'
+      );
+
+      db.transaction(function(tx){
+        tx.executeSql('SELECT * FROM patients', [], function (tx, results){
+          var len = results.rows.length;
+          var str = '';
+          for (i = 0; i < len; i++) {
+            str += "<tr>";
+            str += "<td>" + results.rows.item(i).name + "</td>";
+            str += "<td>" + results.rows.item(i).age + "</td>";
+            str += "<td>" + results.rows.item(i).gender + "</td>";
+            str += "<td>" + results.rows.item(i).notes + "</td>";
+            str += "<td>" + results.rows.item(i).id + "</td>";
+            str += "</tr>";
+            document.getElementById("health_report").innerHTML += str;
+            str = '';
+            }}, null);
+
+    </script>
+    <style>
+      table {
+        width:60%;
+        border-collapse: collapse;
+        border: 3px solid black;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #000;
+        text-transform: uppercase;
+        background: white;
+      }
+      th, td {
+        padding: 8px;
+        text-align: center;
+      }
+      tr:nth-child(even){
+        background: lightgrey;
+      }
+
+    </style>
+  </head>
+  <body><br><br>
+    <table class="TFtable" id="health_report" cellpadding="25px" border="1px">
+          <tr>
+            <th colspan="6" style="text-align: left">Patient Details</th>
+          </tr>
+          <tr>
+            <td id="_id">ID</td>
+            <td id="_name">Name</td>
+            <td id="_age">Age</td>
+            <td id="_gender">Gender</td>
+            <td id="_meds">Medications</td>
+            <td id="_notes">Notes</td>
+        </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        color:white;
+      }
+      label{
+          display: block;
+          width: 150px;
+          margin-left: 25px;
+/*          text-align: left;
+          padding-right: 10px;
+*/        }
+      input{
+        display: block;
+        text-align: left;
+        width: 300px;
+        margin-left: 10px;
+      }
+
+      textarea{
+        display: block;
+        text-align: left;
+        width: 400px;
+        height: 75px;
+        margin-left: 25px;
+      }
+
+      #demo{
+        width: 900px;
+        margin: 0 auto;
+      }
+
+      button{
+        display: block;
+        text-align: left;
+        width: 200px;
+        /*padding: 200px;*/
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .row{
+        display: flex;
+      }
+      .column{
+        width: 450px;
+        padding: 10px;
+        float:left;
+        height: 450px;
+      }
+    </style>
+  </head>
+<br><main>
+  <div id="demo">
+    <div class="row">
+      <div class="column border-right">
+        <!-- Height -->
+        <form class="form-inline">
+            <label for="height">Height: </label>
+            <input type="text" class="form-control" id="height" placeholder="(in inches)">
+        </form><br>
+        <!-- Weight -->
+        <form class="form-inline">
+            <label for="weight">Weight: </label>
+            <input type="text" class="form-control" id="weight" placeholder="(in pounds)">
+        </form><br>
+        <!-- Temperature -->
+        <form class="form-inline">
+            <label for="temp">Body Temperature: </label>
+            <input type="text" class="form-control" id="temp" placeholder="(in degrees Farenheit)">
+        </form><br>
+        <!-- Pulse Rate -->
+        <form class="form-inline">
+            <label for="pulse">Pulse Rate: </label>
+            <input type="text" class="form-control" id="pulse" placeholder="(in bpm)">
+        </form><br>
+        <!-- Blood Pressure -->
+        <form class="form-inline">
+            <label for="blood_pressure">Blood Pressure: </label>
+            <input type="text" class="form-control" id="blood_pressure" placeholder="(in Hg)">
+        </form><br>
+      </div>
+      <div class="column">
+        <!-- Medication -->
+        <form>
+            <label for="meds">Medications:</label>
+            <textarea id="meds" rows="8" cols="40">
+            </textarea>
+        </form>
+
+        <!-- Notes -->
+        <form>
+            <label for="Notes">Notes:</label>
+            <textarea id="notes" rows="8" cols="40">
+            </textarea>
+        </form><br>
+
+        <button type="button" class="btn btn-success btn-lg" id="save" onclick="return save_data()" action="reports.html" style="margin-left: 120px;">Save</button>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,125 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Health Camp</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <style>
+        body{
+          margin:0;
+          background: #222;
+          font-weight: 600;
+        }
+        header{
+          background-color: #800000;
+          height: 50px;
+        }
+        header::after{
+          content: '';
+          display: table;
+          clear: both;
+        }
+        nav{
+          float: right;
+          padding: 14px 16px;
+        }
+
+        nav ul{
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        nav li{
+          display: inline-block;
+          margin-left: 20px;
+          position: relative;
+
+        }
+        nav a{
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size:17px;
+        }
+
+        nav a:hover {
+          color: white;
+        }
+
+        nav a:hover::before{
+          width: 100%;
+        }
+
+        nav a::before{
+          background-color:white;
+          content: '';
+          position: absolute;
+          top: 0;
+          display: block;
+          height: 5px;
+          width:0%;
+          transition: all ease-in-out 150ms;
+        }
+
+        .home{
+          float: left;
+          text-transform: uppercase;
+          color:white;
+          padding-top: 5px;
+        }
+
+        .home a{
+          color: white;
+        }
+
+      </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="home">
+          <a href="#home"><h2>Health Camp</h2></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#demographics">Demographics</a></li>
+            <li><a href="#health_vitals">Health Vitals</a></li>
+            <li><a href="#reports">Reports</a></li>
+          </div>
+        </ul>
+        </nav>
+      </div><br>
+    </header>
+    <main>
+      <div id="content"></div>
+    </main>
+    <!-- <script src="main.js"></script> -->
+    <script src="{%static 'main.js'%}"></script>
+    <script>
+    // Create WebSQL Database
+      var db = openDatabase('Health Camp','0.1','Health Camp',65536);
+      db.transaction(
+        function(transaction){
+          transaction.executeSql('DROP TABLE patients',null,
+            function(){
+              console.log('Drop Succeeded');
+            },
+            function(){
+              console.log('Drop Failed');
+            });
+
+        transaction.executeSql(
+          'CREATE TABLE IF NOT EXISTS patients ' +
+          ' (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ' +
+          ' name TEXT NOT NULL, age TEXT NOT NULL, gender TEXT NOT NULL, medications TEXT, notes TEXT);'
+        );}
+      );
+
+
+    </script>
+  </body>
+</html>
