@@ -28,7 +28,7 @@ function navigate(){
   });
 };
 
-// Save Data to WebSQL whel button is clicked on Demographics and Health Vitals Page
+// Save Data to WebSQL when button is clicked on Demographics and Health Vitals Page
 function save_data(){
   db = openDatabase('Health Camp','0.1','Health Camp',65536);
 

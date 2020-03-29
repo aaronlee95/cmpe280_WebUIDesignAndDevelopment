@@ -19,7 +19,5 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('', include('health_app.urls')),
-
-    # path('', include('home.urls')),
     path('admin/', admin.site.urls),
 ]

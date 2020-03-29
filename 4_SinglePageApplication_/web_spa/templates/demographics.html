@@ -59,34 +59,36 @@
 
   <body>
     <div id="demo"><br>
+        <!-- <form action="demographics.html" method="post"> -->
       <div class="row">
         <div class="column border-right">
           <!-- First Name -->
-          <form class="form-inline">
+          <form class="form-inline" action="{% url 'index'%}" method="post">
+            {% csrf_token %}
               <label for="first_name">First Name: </label>
               <input type="text" class="form-control" id="first_name" placeholder="Enter First Name">
-          </form><br>
           <!-- Last Name -->
-          <form class="form-inline">
+              <br><br><br>
               <label for="last_name">Last Name: </label>
               <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name">
-          </form><br>
           <!-- Gender -->
-          <form class="form-inline">
+              <br><br><br>
               <label for="gender">Gender: </label>
               <input type = "text" id="gender" class="form-control" placeholder="Male/Female">
-          </form><br>
           <!-- Age -->
-          <form class="form-inline">
+              <br><br><br>
               <label for="age">Age: </label>
               <input type="text" class="form-control" id="age" placeholder="Enter Age">
-          </form><br>
           <!-- Notes -->
-          <form class="form-inline">
+              <br><br><br>
               <label for="notes">Notes or Other Details: </label>
               <input type="text" class="form-control" id="notes" placeholder="Optional">
+              <br><br><br>
+
+            <button type="button" class="btn btn-success btn-lg" id="save" onclick="return save_data()" style="margin-left: 175px"><strong>Save</strong></button>
+
+            <!-- <input type="submit" value= -->
           </form><br>
-        <button type="button" class="btn btn-success btn-lg" id="save" onclick="return save_data()" action="health_vitals.html" style="margin-left: 175px"><strong>Save</strong></button>
       </div>
       <div class="column">
         <img src="{%static 'upload_pic.jpg'%}"><br>
