@@ -7,3 +7,12 @@ def index(request):
 
 def home(request):
     return render(request, 'home.html')
+
+def demographics(request):
+    return render(request, 'demographics.html')
+
+def health_vitals(request):
+    return render(request, 'health_vitals.html')
+
+def reports(request):
+    return render(request, 'reports.html')
