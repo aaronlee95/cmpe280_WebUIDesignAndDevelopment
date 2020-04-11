@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+    h2
+    {
+      text-align: center;
+    }
+
+    .palette{
+      float: left;
+      width: 68px;
+      height: 350px;
+      margin-left: 10px;
+      padding: 10px;
+      border: 1px solid black;
+      /*text-align: center;*/
+      align-content: center;
+    }
+
+    .square{
+      /*float: center;*/
+      margin-top: 20px;
+      height: 65px;
+      width: 65px;
+      background-color: #b3d9ff;
+    }
+
+    .circle{
+      margin-top: 20px;
+      height: 65px;
+      width: 65px;
+      background-color: #b3d9ff;
+      border-radius: 50%;
+    }
+
+    .triangle-up {
+      margin-top: 20px;
+      width: 0;
+      height: 0;
+      border-left: 33px solid transparent;
+      border-right: 33px solid transparent;
+      border-bottom: 60px solid #b3d9ff;
+    }
+
+    #div1, #div2 {
+      float: left;
+      width: 100px;
+      height: 350px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+
+
+
+  </style>
+  <script>
+    function allowDrop(ev)
+    {
+      ev.preventDefault();
+    }
+
+    function drag(ev)
+    {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev)
+    {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Drag and Drop Control Palette Driver</h2>
+  <hr>
+  <!-- <p>Drag the image back and forth between the two div elements.</p> -->
+
+  <div class="palette" ondragover="allowDrop(event)" ondrop="drop(event)">
+    <div class="square" draggable="true" ondragstart="drag(event)" id="dragSquare"></div>
+    <div class="circle" draggable="true" ondragstart="drag(event)" id="dragCircle"></div>
+    <div class="triangle-up" draggable="true" ondragstart="drag(event)" id="dragTriangle"></div>
+  </div>
+
+
+
+<!--   <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+  </div>
+ -->
+  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>
