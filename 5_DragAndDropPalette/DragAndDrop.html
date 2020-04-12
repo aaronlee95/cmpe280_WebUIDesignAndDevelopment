@@ -45,9 +45,9 @@
 
     #div1, #div2 {
       float: left;
-      width: 100px;
+      width: 500px;
       height: 350px;
-      margin: 10px;
+      margin-left: 10px;
       padding: 10px;
       border: 1px solid black;
     }
@@ -55,7 +55,25 @@
 
 
   </style>
+</head>
+<body>
+
+  <h2>Drag and Drop Control Palette Driver</h2>
+  <hr>
+  <!-- <p>Drag the image back and forth between the two div elements.</p> -->
+
+  <div class="palette" ondragover="allowDrop(event)" ondrop="drop(event)">
+    <div class="square draggable" draggable="true" ondragstart="drag(event)" id="dragSquare"></div>
+    <div class="circle draggable" draggable="true" ondragstart="drag(event)" id="dragCircle"></div>
+    <div class="triangle-up draggable" draggable="true" ondragstart="drag(event)" id="dragTriangle"></div>
+  </div>
+
+
+  <div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
   <script>
+    /*
     function allowDrop(ev)
     {
       ev.preventDefault();
@@ -71,28 +89,36 @@
       ev.preventDefault();
       var data = ev.dataTransfer.getData("text");
       ev.target.appendChild(document.getElementById(data));
-    }
+    }*/
+
+    const draggableElements = document.querySelectorAll(".draggable");
+    const droppableElements = document.querySelectorAll(".droppable");
+
+
+    dragSquare.onmousedown = function(event){
+      dragSquare.style.position = 'absolute';
+      dragSquare.style.zIndex = 1000;
+      document.body.append(dragSquare);
+      moveAt(event.pageX, event.pageY);
+      function moveAt(pageX, pageY){
+        dragSquare.style.left = pageX - dragSquare.offsetWidth / 2 + 'px';
+        dragSquare.style.top = pageY - dragSquare.offsetHeight / 2 + 'px';
+      }
+      function onMouseMove(event){
+        moveAt(event.pageX, event.pageY);
+      }
+
+      document.addEventListener('mousemove', onMouseMove);
+      dragSquare.onmouseup = function(){
+        document.removeEventListener('mousemove', onMouseMove);
+        dragSquare.onmouseup = null;
+      };
+
+      dragSquare.ondragstart=function(){
+        return false;
+      }
+    };
+
   </script>
-</head>
-<body>
 
-  <h2>Drag and Drop Control Palette Driver</h2>
-  <hr>
-  <!-- <p>Drag the image back and forth between the two div elements.</p> -->
-
-  <div class="palette" ondragover="allowDrop(event)" ondrop="drop(event)">
-    <div class="square" draggable="true" ondragstart="drag(event)" id="dragSquare"></div>
-    <div class="circle" draggable="true" ondragstart="drag(event)" id="dragCircle"></div>
-    <div class="triangle-up" draggable="true" ondragstart="drag(event)" id="dragTriangle"></div>
-  </div>
-
-
-
-<!--   <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
-  </div>
- -->
-  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-</body>
 </html>

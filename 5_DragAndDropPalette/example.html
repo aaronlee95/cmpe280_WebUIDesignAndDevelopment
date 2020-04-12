@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+
+    h2
+    {
+      text-align: center;
+    }
+
+    .palette-container{
+      float: left;
+      width: 68px;
+      height: 350px;
+      margin-left: 10px;
+      padding: 10px;
+      border: 1px solid black;
+      /*text-align: center;*/
+      align-content: center;
+    }
+
+    #square{
+      /*float: center;*/
+      margin-top: 20px;
+      height: 65px;
+      width: 65px;
+      background-color: #b3d9ff;
+      object-position: absolute;
+    }
+
+    #circle{
+      margin-top: 20px;
+      height: 65px;
+      width: 65px;
+      background-color: #b3d9ff;
+      border-radius: 50%;
+      object-position: absolute;
+    }
+
+    #triangle-up {
+      margin-top: 20px;
+      width: 0;
+      height: 0;
+      border-left: 33px solid transparent;
+      border-right: 33px solid transparent;
+      border-bottom: 60px solid #b3d9ff;
+      object-position: absolute;
+    }
+
+    .draggable{
+
+    }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".draggable" ).draggable();
+  } );
+
+  $(function(){
+    $("body").on("draggable dragstart",
+      function(event, ui){
+        dropped = false;
+        ui.helper.before(ui.helper.clone().draggable({helper: 'clone'}));
+      }
+      );
+  });
+
+  $(function(){
+    $( "body" ).on( ".drggable dragstop",
+    function( event, ui ) {
+        if(dropped)
+            ui.helper.draggable('destroy');
+        else
+            ui.helper.remove();
+    })
+  });
+
+
+
+
+
+
+  </script>
+</head>
+<body>
+<h2>Drag and Drop Control Palette Driver</h2>
+  <hr>
+
+  <div class="palette-container">
+    <div id="square" class="ui-widget-content draggable">
+        <div id="square" class="ui-widget-content draggable"></div>
+    </div>
+    <div id="triangle-up" class="ui-widget-content draggable">
+        <div id="triangle-up" class="ui-widget-content draggable"></div>
+    </div>
+    <div id="circle" class="ui-widget-content draggable">
+        <div id="circle" class="ui-widget-content draggable"></div>
+    </div>
+
+
+  </div>
+
+
+  <div class="ui-widget-content">Drop blue box here..</div>
+</body>
+</html>

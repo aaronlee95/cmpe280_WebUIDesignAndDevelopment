@@ -1,0 +1,116 @@
+<!-- https://stackoverflow.com/questions/7878980/jquery-ui-drag-shape-but-keep-a-copy-of-the-original-shape -->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+     h2{
+   text-align: center;
+ }
+
+.palette-container{
+  float: left;
+  width: 68px;
+  height: 350px;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  /*text-align: center;*/
+  align-content: center;
+
+ }
+
+ #square {
+/*      width: 20px;
+     height: 20px;
+     background:blue;
+     display:block;
+     float:left;
+     border:0px
+      */
+      margin-top: 20px;
+      height: 65px;
+      width: 65px;
+      background-color: #b3d9ff;
+      object-position: absolute;
+      }
+          #circle{
+      margin-top: 20px;
+      height: 65px;
+      width: 65px;
+      background-color: #b3d9ff;
+      border-radius: 50%;
+      object-position: absolute;
+    }
+
+    #triangle-up {
+      margin-top: 20px;
+      width: 0;
+      height: 0;
+      border-left: 33px solid transparent;
+      border-right: 33px solid transparent;
+      border-bottom: 60px solid #b3d9ff;
+      object-position: absolute;
+    }
+
+ #drop-container {
+     width:200px;
+     height:200px;
+     background:yellow;
+     margin:25px;
+     }
+  </style>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+</head>
+<body>
+
+<h2>Drag and Drop Control Palette Driver</h2>
+  <hr>
+
+  <div class="palette-container">
+    <div id="square" class="ui-widget-content draggable">
+        <div id="square" class="ui-widget-content draggable"></div>
+    </div>
+    <div id="triangle-up" class="ui-widget-content draggable">
+        <div id="triangle-up" class="ui-widget-content draggable"></div>
+    </div>
+    <div id="circle" class="ui-widget-content draggable">
+        <div id="circle" class="ui-widget-content draggable"></div>
+    </div>
+
+
+  </div>
+  <div id="drop-container" class="ui-widget-content">Drop blue box here..</div>
+</body>
+<script>
+
+$(function () {
+
+    $(".draggable").draggable({
+        helper: "clone",
+        cursor: 'move'
+    });
+    $("#drop-container").droppable({
+        drop: function (event, ui) {
+            var $canvas = $(this);
+            if (!ui.draggable.hasClass('canvas-element')) {
+                var $canvasElement = ui.draggable.clone();
+                $canvasElement.addClass('canvas-element');
+                $canvasElement.draggable({
+                    containment: '#drop-container'
+                });
+                $canvas.append($canvasElement);
+                $canvasElement.css({
+                    left: (ui.position.left),
+                    top: (ui.position.top),
+                    position: 'absolute'
+                });
+            }
+        }
+    });
+
+});
+</script>
+</html>
