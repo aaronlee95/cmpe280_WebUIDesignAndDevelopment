@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <style>
+      h2{
+        text-align: center;
+      }
+      #draggable {
+        width: 20px;
+        height: 20px;
+        background:blue;
+        display:block;
+        float:left;
+        border:0px
+      }
+    #container
+    {
+      width:200px;
+      height:200px;
+      background:yellow;
+      margin:25px;
+    }
+    </style>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script>
+  $(function(){
+    $(".draggable").draggable({
+        helper: "clone",
+        cursor: 'move'
+    });
+
+</script>
+</head>
+<body>
+  <div id="draggable" class="ui-widget-content">
+    <div id="draggable" class="ui-widget-content"></div>
+  </div>
+  <div id="container" class="ui-widget-content">Drop blue box here..</div>
+</body>
+</html>
