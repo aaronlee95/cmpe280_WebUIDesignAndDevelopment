@@ -1,6 +1,6 @@
 <!-- https://stackoverflow.com/questions/7878980/jquery-ui-drag-shape-but-keep-a-copy-of-the-original-shape -->
-<!-- https://stackoverflow.com/questions/7878980/jquery-ui-drag-shape-but-keep-a-copy-of-the-original-shape -->
-<!DOCTYPE HTML>
+<!-- https://stackoverflow.com/questions/7878980/jquery-ui-drag-shape-but-keep-a-copy-of-the-original-shape
+ --><!DOCTYPE HTML>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -89,15 +89,28 @@
 <script>
 $(function(){
   $(".draggable").draggable({
-    // helper: 'clone',
-    // cursor: 'move';
+    helper: 'clone',
   });
 
-  $(".drop-container").droppable({
+  $(function(){"#drop-container"().droppable({
     drop:function(event,ui){
+      var $canvas = $(this);
+      if(!ui.draggable.hasClass('canvas-element')){
+        var $canvasElement = ui.draggable.clone();
+        $canvasElement.addClass('canvas-element');
+        $canvasElement.draggable({containment: '#drop-container'});
+        $canvas.append($canvasElement);
+        $canvasElement.css({
+          left: (ui.posiiton.left),
+          top: (ui.position.top),
+          position: 'absolute'
+        });
 
+      }
     }
   })
+
+});
 });
 </script>
 </html>
