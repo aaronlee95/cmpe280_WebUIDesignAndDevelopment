@@ -1,130 +1,69 @@
 <!-- https://stackoverflow.com/questions/37937428/how-we-can-clone-any-html-element-using-drag-then-drop-it-in-another-column-onl -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-    <style>
-      h2{
-        text-align: center;
-      }
-.palette-container{
-  float: left;
-  width: 68px;
-  height: 350px;
-  margin-left: 10px;
-  padding: 10px;
-  border: 1px solid black;
-  /*text-align: center;*/
-  align-content: center;
-
- }
-
- #square {
-/*      width: 20px;
-     height: 20px;
-     background:blue;
-     display:block;
-     float:left;
-     border:0px
-      */
-      margin-top: 20px;
-      height: 65px;
-      width: 65px;
-      background-color: #b3d9ff;
-      object-position: absolute;
-      }
-          #circle{
-      margin-top: 20px;
-      height: 65px;
-      width: 65px;
-      background-color: #b3d9ff;
-      border-radius: 50%;
-      object-position: absolute;
-    }
-
-    #triangle-up {
-      margin-top: 20px;
-      width: 0;
-      height: 0;
-      border-left: 33px solid transparent;
-      border-right: 33px solid transparent;
-      border-bottom: 60px solid #b3d9ff;
-      object-position: absolute;
-    </style>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-</head>
-<body>
-
-<h2>Drag and Drop Control Palette Driver</h2>
-  <hr>
-
-  <div class="palette-container">
-    <div id="square" class="ui-widget-content draggable">
-        <div id="square" class="ui-widget-content draggable"></div>
-    </div>
-    <div id="triangle-up" class="ui-widget-content draggable">
-        <div id="triangle-up" class="ui-widget-content draggable"></div>
-    </div>
-    <div id="circle" class="ui-widget-content draggable">
-        <div id="circle" class="ui-widget-content draggable"></div>
-    </div>
-
-  <div id="drop-container" class="ui-widget-content">Drop blue box here..</div>
-  </div>
-
-</body>
-<script>
-  $(document).ready(function(){
-    $('.square')
-  })
-
-
-
-</script>
-</html>
- -->
-
- <html>
+<html>
 <head>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 
-    <script>
+  <script>
   $(document).ready(function(){
-
-    $('.test').draggable({
-       zIndex:3000,
-           appendTo:'body',
-           helper: "clone",
-           start: function (e, u) {
-       },
-           stop: function () {
-
-           }}).click(function(){
+    $('.draggable').draggable({
+      zIndex:3000,
+      appendTo:'body',
+      helper: "clone",
+      start: function (e, u){
+        },
+      stop: function (){
+        }}).click(function(){
           var b=parseInt($(this.width));
         $(this).css('width',b+5)
         })
 
-
-        $('#drop').droppable({
-          accept: ".test",
+      $('html').droppable({
+          accept: ".draggable",
           drop:function(e,u){
         var a=u.helper.clone();
             console.log(a)
               $(this).append(a);
             $(a).attr('class','dropped').draggable();
           }  })
-
-
     })
   </script>
+  <style>
+
+    h2{
+      text-align: center;
+    }
+
+
+  .palette-container{
+    float: left;
+    width: 68px;
+    height: 350px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    align-content: center;
+    }
+
+/*   .square{
+    width: 65px;
+    height: 65px;
+    background-color: red;
+  }
+ */  </style>
 </head>
 <body>
-<div class="test" style="width:50px;height:50px;background-color:red" ></div>
-<div id="drop" style="width:200px;height:200px;background-color:green"     ></div>
+  <h2>Drag and Drop Control Palette Driver</h2>
+  <hr>
+
+  <div class="palette-container">
+    <div class="draggable" id="square" style="width: 65px; height: 65px; background-color:red;"></div>
+    <div class="draggable" id="circle" style="margin-top:20px;height:65px;width:65px;background-color:#b369ff;border-radius:50%" ></div>
+    <div class="draggable" id="triangle" style="margin-top: 20px; width: 0; height: 0; border-left: 33px solid transparent; border-right: 33px solid transparent; border-bottom: 60px solid #b3d9ff;  object-position: absolute;"></div>
+    <div class="draggable" id="arrow-right" style="margin-top: 20px; width: 0; height: 0; border-top: 35px solid transparent; border-bottom: 35px solid transparent;
+    border-left: 60px solid green;"></div>
+  </div>
 </body>
 
 </html>
