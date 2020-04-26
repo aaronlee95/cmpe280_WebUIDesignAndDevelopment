@@ -1,0 +1,224 @@
+{"_id":{"$oid":"5ea4e47439975e63de222e1e"},"Country":"United States","Cases":"956,375\n","Deaths":"53,928\n","Recovered":"102,340\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e1f"},"Country":"Spain","Cases":"223,759\n","Deaths":"22,902\n","Recovered":"95,708\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e20"},"Country":"Italy","Cases":"195,351\n","Deaths":"26,384\n","Recovered":"63,120\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e22"},"Country":"United Kingdom","Cases":"148,377\n","Deaths":"20,319\n","Recovered":"—\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e21"},"Country":"Germany","Cases":"156,513\n","Deaths":"5,877\n","Recovered":"100,129\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e24"},"Country":"Turkey","Cases":"107,773\n","Deaths":"2,706\n","Recovered":"25,582\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e26"},"Country":"China","Cases":"82,827\n","Deaths":"4,632\n","Recovered":"77,346\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e25"},"Country":"Iran","Cases":"89,328\n","Deaths":"5,650\n","Recovered":"68,193\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e23"},"Country":"France","Cases":"124,114\n","Deaths":"22,614\n","Recovered":"44,594\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e27"},"Country":"Russia","Cases":"74,588\n","Deaths":"681\n","Recovered":"6,250\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e29"},"Country":"Canada","Cases":"45,354\n","Deaths":"2,465\n","Recovered":"16,425\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e2b"},"Country":"Netherlands","Cases":"37,190\n","Deaths":"4,409\n","Recovered":"—\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e28"},"Country":"Brazil","Cases":"59,324\n","Deaths":"4,057\n","Recovered":"27,655\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e2a"},"Country":"Belgium","Cases":"45,325\n","Deaths":"6,917\n","Recovered":"10,417\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e2c"},"Country":"Switzerland","Cases":"28,619\n","Deaths":"1,596\n","Recovered":"21,300\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e30"},"Country":"Ecuador","Cases":"22,719\n","Deaths":"576\n","Recovered":"1,366\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e2e"},"Country":"India","Cases":"24,942\n","Deaths":"779\n","Recovered":"5,210\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e2f"},"Country":"Portugal","Cases":"23,392\n","Deaths":"880\n","Recovered":"1,277\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e31"},"Country":"Ireland","Cases":"18,561\n","Deaths":"1,063\n","Recovered":"9,233\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e35"},"Country":"Austria","Cases":"15,128\n","Deaths":"536\n","Recovered":"12,103\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e2d"},"Country":"Peru","Cases":"25,331\n","Deaths":"700\n","Recovered":"7,797\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e33"},"Country":"Saudi Arabia","Cases":"16,299\n","Deaths":"136\n","Recovered":"2,215\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e34"},"Country":"Israel","Cases":"15,298\n","Deaths":"199\n","Recovered":"6,435\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e3a"},"Country":"Pakistan","Cases":"12,723\n","Deaths":"269\n","Recovered":"2,866\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e36"},"Country":"Mexico","Cases":"13,842\n","Deaths":"1,305\n","Recovered":"2,627\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e32"},"Country":"Sweden","Cases":"18,177\n","Deaths":"2,192\n","Recovered":"550\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e3f"},"Country":"Belarus","Cases":"9,590\n","Deaths":"67\n","Recovered":"1,573\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e39"},"Country":"Chile","Cases":"12,858\n","Deaths":"181\n","Recovered":"6,746\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e3b"},"Country":"Poland","Cases":"11,273\n","Deaths":"524\n","Recovered":"2,126\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e38"},"Country":"Singapore","Cases":"12,693\n","Deaths":"12\n","Recovered":"1,002\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e37"},"Country":"Japan","Cases":"13,231\n","Deaths":"360\n","Recovered":"2,536\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e3e"},"Country":"United Arab Emirates","Cases":"9,813\n","Deaths":"71\n","Recovered":"1,887\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e40"},"Country":"Qatar","Cases":"9,358\n","Deaths":"10\n","Recovered":"929\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e44"},"Country":"Serbia","Cases":"7,779\n","Deaths":"151\n","Recovered":"1,152\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e3d"},"Country":"Romania","Cases":"10,635\n","Deaths":"579\n","Recovered":"2,890\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e3c"},"Country":"South Korea","Cases":"10,728\n","Deaths":"242\n","Recovered":"8,717\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e45"},"Country":"Norway","Cases":"7,499\n","Deaths":"201\n","Recovered":"—\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e43"},"Country":"Ukraine","Cases":"8,125\n","Deaths":"201\n","Recovered":"782\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e42"},"Country":"Denmark","Cases":"8,445\n","Deaths":"418\n","Recovered":"5,669\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e41"},"Country":"Indonesia","Cases":"8,607\n","Deaths":"720\n","Recovered":"1,042\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e4a"},"Country":"Malaysia","Cases":"5,742\n","Deaths":"98\n","Recovered":"3,762\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e48"},"Country":"Australia","Cases":"6,703\n","Deaths":"81\n","Recovered":"5,387\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e49"},"Country":"Dominican Republic","Cases":"5,926\n","Deaths":"273\n","Recovered":"822\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e46"},"Country":"Czech Republic","Cases":"7,352\n","Deaths":"218\n","Recovered":"2,453\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e47"},"Country":"Philippines","Cases":"7,294\n","Deaths":"494\n","Recovered":"792\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e4f"},"Country":"South Africa","Cases":"4,361\n","Deaths":"86\n","Recovered":"1,473\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e4d"},"Country":"Bangladesh","Cases":"4,998\n","Deaths":"140\n","Recovered":"112\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e4e"},"Country":"Finland","Cases":"4,475\n","Deaths":"186\n","Recovered":"2,500\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e4c"},"Country":"Colombia","Cases":"5,142\n","Deaths":"233\n","Recovered":"1,067\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e4b"},"Country":"Panama","Cases":"5,538\n","Deaths":"159\n","Recovered":"338\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e54"},"Country":"Moldova","Cases":"3,304\n","Deaths":"94\n","Recovered":"825\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e53"},"Country":"Luxembourg","Cases":"3,711\n","Deaths":"85\n","Recovered":"760\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e52"},"Country":"Argentina","Cases":"3,767\n","Deaths":"185\n","Recovered":"965\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e51"},"Country":"Morocco","Cases":"3,897\n","Deaths":"159\n","Recovered":"537\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e59"},"Country":"Bahrain","Cases":"2,588\n","Deaths":"8\n","Recovered":"1,160\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e50"},"Country":"Egypt","Cases":"4,319\n","Deaths":"307\n","Recovered":"1,114\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e57"},"Country":"Kuwait","Cases":"2,892\n","Deaths":"19\n","Recovered":"656\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e56"},"Country":"Thailand","Cases":"2,907\n","Deaths":"51\n","Recovered":"2,547\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e55"},"Country":"Algeria","Cases":"3,256\n","Deaths":"419\n","Recovered":"1,479\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e58"},"Country":"Kazakhstan","Cases":"2,601\n","Deaths":"25\n","Recovered":"646\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e5e"},"Country":"Uzbekistan","Cases":"1,862\n","Deaths":"8\n","Recovered":"707\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e5b"},"Country":"Hungary","Cases":"2,443\n","Deaths":"262\n","Recovered":"458\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e5c"},"Country":"Croatia","Cases":"2,016\n","Deaths":"54\n","Recovered":"1,034\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e5a"},"Country":"Greece","Cases":"2,506\n","Deaths":"130\n","Recovered":"577\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e5d"},"Country":"Oman","Cases":"1,905\n","Deaths":"10\n","Recovered":"329\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e63"},"Country":"Azerbaijan","Cases":"1,617\n","Deaths":"21\n","Recovered":"1,080\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e60"},"Country":"Iraq","Cases":"1,763\n","Deaths":"86\n","Recovered":"1,224\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e61"},"Country":"Armenia","Cases":"1,677\n","Deaths":"28\n","Recovered":"803\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e5f"},"Country":"Iceland","Cases":"1,790\n","Deaths":"10\n","Recovered":"1,570\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e62"},"Country":"Estonia","Cases":"1,635\n","Deaths":"46\n","Recovered":"228\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e66"},"Country":"Afghanistan","Cases":"1,463\n","Deaths":"47\n","Recovered":"206\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e65"},"Country":"Bosnia & Herzegovina","Cases":"1,486\n","Deaths":"57\n","Recovered":"592\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e64"},"Country":"Cameroon","Cases":"1,518\n","Deaths":"53\n","Recovered":"697\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e67"},"Country":"Lithuania","Cases":"1,426\n","Deaths":"41\n","Recovered":"460\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e68"},"Country":"Slovenia","Cases":"1,388\n","Deaths":"81\n","Recovered":"219\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e6b"},"Country":"Cuba","Cases":"1,337\n","Deaths":"51\n","Recovered":"437\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e69"},"Country":"Slovakia","Cases":"1,373\n","Deaths":"17\n","Recovered":"386\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e6c"},"Country":"Puerto Rico","Cases":"1,307\n","Deaths":"83\n","Recovered":"—\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e6a"},"Country":"North Macedonia","Cases":"1,367\n","Deaths":"59\n","Recovered":"374\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e6e"},"Country":"Bulgaria","Cases":"1,247\n","Deaths":"55\n","Recovered":"197\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e70"},"Country":"New Zealand","Cases":"1,121\n","Deaths":"18\n","Recovered":"1,142\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e6d"},"Country":"Ghana","Cases":"1,279\n","Deaths":"10\n","Recovered":"134\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e71"},"Country":"Ivory Coast","Cases":"1,111\n","Deaths":"14\n","Recovered":"449\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e6f"},"Country":"Nigeria","Cases":"1,182\n","Deaths":"35\n","Recovered":"222\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e73"},"Country":"Djibouti","Cases":"1,008\n","Deaths":"2\n","Recovered":"373\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e75"},"Country":"Tunisia","Cases":"939\n","Deaths":"38\n","Recovered":"207\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e76"},"Country":"Cyprus","Cases":"810\n","Deaths":"14\n","Recovered":"148\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e74"},"Country":"Guinea","Cases":"996\n","Deaths":"7\n","Recovered":"208\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e78"},"Country":"Latvia","Cases":"804\n","Deaths":"12\n","Recovered":"267\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e72"},"Country":"Hong Kong","Cases":"1,038\n","Deaths":"4\n","Recovered":"753\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e7a"},"Country":"Kosovo","Cases":"731\n","Deaths":"20\n","Recovered":"165\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e7b"},"Country":"Albania","Cases":"712\n","Deaths":"27\n","Recovered":"403\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e79"},"Country":"Andorra","Cases":"738\n","Deaths":"40\n","Recovered":"344\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e7d"},"Country":"Costa Rica","Cases":"693\n","Deaths":"6\n","Recovered":"242\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e77"},"Country":"Bolivia","Cases":"807\n","Deaths":"44\n","Recovered":"54\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e7f"},"Country":"Kyrgyzstan","Cases":"665\n","Deaths":"9\n","Recovered":"345\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e7e"},"Country":"Niger","Cases":"684\n","Deaths":"27\n","Recovered":"325\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e80"},"Country":"Burkina Faso","Cases":"629\n","Deaths":"41\n","Recovered":"442\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e7c"},"Country":"Lebanon","Cases":"704\n","Deaths":"24\n","Recovered":"143\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e84"},"Country":"San Marino","Cases":"513\n","Deaths":"40\n","Recovered":"64\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e85"},"Country":"Georgia","Cases":"456\n","Deaths":"5\n","Recovered":"139\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e83"},"Country":"Honduras","Cases":"591\n","Deaths":"55\n","Recovered":"58\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e82"},"Country":"Uruguay","Cases":"596\n","Deaths":"14\n","Recovered":"370\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e81"},"Country":"Senegal","Cases":"614\n","Deaths":"6\n","Recovered":"276\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e89"},"Country":"Guatemala","Cases":"430\n","Deaths":"11\n","Recovered":"30\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e8a"},"Country":"Taiwan","Cases":"429\n","Deaths":"6\n","Recovered":"275\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e88"},"Country":"Jordan","Cases":"444\n","Deaths":"7\n","Recovered":"332\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e87"},"Country":"Malta","Cases":"448\n","Deaths":"4\n","Recovered":"249\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e86"},"Country":"Sri Lanka","Cases":"452\n","Deaths":"7\n","Recovered":"118\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e8e"},"Country":"Kenya","Cases":"343\n","Deaths":"14\n","Recovered":"95\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e8f"},"Country":"Palestine","Cases":"341\n","Deaths":"2\n","Recovered":"91\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e8d"},"Country":"Mali","Cases":"370\n","Deaths":"21\n","Recovered":"91\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e93"},"Country":"Isle of Man","Cases":"308\n","Deaths":"18\n","Recovered":"243\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e8b"},"Country":"DR Congo","Cases":"416\n","Deaths":"28\n","Recovered":"49\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e8c"},"Country":"Somalia","Cases":"390\n","Deaths":"18\n","Recovered":"8\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e94"},"Country":"Tanzania","Cases":"299\n","Deaths":"10\n","Recovered":"48\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e92"},"Country":"Montenegro","Cases":"320\n","Deaths":"6\n","Recovered":"153\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e98"},"Country":"Vietnam","Cases":"270\n","Deaths":"0\n","Recovered":"225\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e91"},"Country":"Venezuela","Cases":"323\n","Deaths":"10\n","Recovered":"132\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e99"},"Country":"Equatorial Guinea","Cases":"258\n","Deaths":"1\n","Recovered":"8\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e97"},"Country":"El Salvador","Cases":"274\n","Deaths":"8\n","Recovered":"75\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e9d"},"Country":"Republic of the Congo","Cases":"200\n","Deaths":"8\n","Recovered":"19\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e90"},"Country":"Mauritius","Cases":"331\n","Deaths":"9\n","Recovered":"285\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e96"},"Country":"Jersey","Cases":"280\n","Deaths":"19\n","Recovered":"165\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e9c"},"Country":"Sudan","Cases":"213\n","Deaths":"17\n","Recovered":"19\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea2"},"Country":"Myanmar","Cases":"144\n","Deaths":"5\n","Recovered":"10\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e9e"},"Country":"Faroe Islands","Cases":"187\n","Deaths":"0\n","Recovered":"178\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e9b"},"Country":"Paraguay","Cases":"223\n","Deaths":"9\n","Recovered":"78\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e95"},"Country":"Jamaica","Cases":"288\n","Deaths":"7\n","Recovered":"28\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea1"},"Country":"Gabon","Cases":"176\n","Deaths":"3\n","Recovered":"30\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea3"},"Country":"Brunei","Cases":"138\n","Deaths":"1\n","Recovered":"121\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea7"},"Country":"Cambodia","Cases":"122\n","Deaths":"0\n","Recovered":"117\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e9a"},"Country":"Guernsey","Cases":"245\n","Deaths":"12\n","Recovered":"167\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea6"},"Country":"Madagascar","Cases":"123\n","Deaths":"0\n","Recovered":"62\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea8"},"Country":"Ethiopia","Cases":"122\n","Deaths":"3\n","Recovered":"29\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea0"},"Country":"Maldives","Cases":"177\n","Deaths":"0\n","Recovered":"17\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222e9f"},"Country":"Rwanda","Cases":"183\n","Deaths":"0\n","Recovered":"88\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eab"},"Country":"Bermuda","Cases":"109\n","Deaths":"5\n","Recovered":"39\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ead"},"Country":"Aruba","Cases":"100\n","Deaths":"2\n","Recovered":"69\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eac"},"Country":"Northern Cyprus","Cases":"108\n","Deaths":"3\n","Recovered":"52\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea5"},"Country":"Gibraltar","Cases":"136\n","Deaths":"0\n","Recovered":"131\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea4"},"Country":"Guam","Cases":"138\n","Deaths":"5\n","Recovered":"126\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb0"},"Country":"Cape Verde","Cases":"90\n","Deaths":"1\n","Recovered":"1\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb2"},"Country":"Zambia","Cases":"84\n","Deaths":"3\n","Recovered":"37\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb1"},"Country":"Sierra Leone","Cases":"86\n","Deaths":"3\n","Recovered":"10\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eaa"},"Country":"Trinidad & Tobago","Cases":"115\n","Deaths":"8\n","Recovered":"48\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ea9"},"Country":"Liberia","Cases":"120\n","Deaths":"11\n","Recovered":"25\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb5"},"Country":"Bahamas","Cases":"77\n","Deaths":"11\n","Recovered":"15\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb6"},"Country":"Uganda","Cases":"75\n","Deaths":"0\n","Recovered":"46\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eaf"},"Country":"Monaco","Cases":"94\n","Deaths":"4\n","Recovered":"35\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eae"},"Country":"Togo","Cases":"96\n","Deaths":"6\n","Recovered":"62\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb7"},"Country":"Guyana","Cases":"73\n","Deaths":"8\n","Recovered":"12\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eba"},"Country":"Cayman Islands","Cases":"70\n","Deaths":"1\n","Recovered":"8\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ebb"},"Country":"Mozambique","Cases":"70\n","Deaths":"0\n","Recovered":"12\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb4"},"Country":"Barbados","Cases":"79\n","Deaths":"6\n","Recovered":"31\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb3"},"Country":"Liechtenstein","Cases":"82\n","Deaths":"1\n","Recovered":"55\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ebc"},"Country":"Donetsk PR","Cases":"67\n","Deaths":"1\n","Recovered":"2\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ebf"},"Country":"Eswatini","Cases":"56\n","Deaths":"1\n","Recovered":"10\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec0"},"Country":"Benin","Cases":"54\n","Deaths":"1\n","Recovered":"27\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb9"},"Country":"Haiti","Cases":"72\n","Deaths":"5\n","Recovered":"2\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec1"},"Country":"U.S. Virgin Islands","Cases":"54\n","Deaths":"3\n","Recovered":"50\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec4"},"Country":"Luhansk PR","Cases":"48\n","Deaths":"0\n","Recovered":"7\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec5"},"Country":"Chad","Cases":"46\n","Deaths":"0\n","Recovered":"15\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eb8"},"Country":"Sint Maarten","Cases":"73\n","Deaths":"12\n","Recovered":"22\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ebe"},"Country":"French Polynesia","Cases":"57\n","Deaths":"0\n","Recovered":"35\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec6"},"Country":"Macau","Cases":"45\n","Deaths":"0\n","Recovered":"27\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec9"},"Country":"Mongolia","Cases":"37\n","Deaths":"0\n","Recovered":"9\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ebd"},"Country":"Libya","Cases":"61\n","Deaths":"2\n","Recovered":"18\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eca"},"Country":"Malawi","Cases":"33\n","Deaths":"3\n","Recovered":"4\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec3"},"Country":"Nepal","Cases":"48\n","Deaths":"0\n","Recovered":"10\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ece"},"Country":"Antigua & Barbuda","Cases":"23\n","Deaths":"3\n","Recovered":"3\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ecb"},"Country":"Zimbabwe","Cases":"31\n","Deaths":"4\n","Recovered":"2\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec2"},"Country":"Guinea-Bissau","Cases":"52\n","Deaths":"0\n","Recovered":"3\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ecf"},"Country":"Botswana","Cases":"22\n","Deaths":"1\n","Recovered":"0\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec8"},"Country":"Eritrea","Cases":"39\n","Deaths":"0\n","Recovered":"11\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed0"},"Country":"Laos","Cases":"19\n","Deaths":"0\n","Recovered":"4\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ec7"},"Country":"Syria","Cases":"42\n","Deaths":"3\n","Recovered":"11\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed4"},"Country":"New Caledonia","Cases":"18\n","Deaths":"0\n","Recovered":"17\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ecd"},"Country":"East Timor","Cases":"24\n","Deaths":"0\n","Recovered":"2\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed3"},"Country":"Grenada","Cases":"18\n","Deaths":"0\n","Recovered":"7\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ecc"},"Country":"Angola","Cases":"25\n","Deaths":"2\n","Recovered":"6\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed5"},"Country":"Central African Republic","Cases":"16\n","Deaths":"0\n","Recovered":"10\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed9"},"Country":"Saint Kitts & Nevis","Cases":"15\n","Deaths":"0\n","Recovered":"2\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed2"},"Country":"Fiji","Cases":"18\n","Deaths":"0\n","Recovered":"10\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed8"},"Country":"Namibia","Cases":"16\n","Deaths":"0\n","Recovered":"7\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eda"},"Country":"Saint Lucia","Cases":"15\n","Deaths":"0\n","Recovered":"15\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed1"},"Country":"Belize","Cases":"18\n","Deaths":"2\n","Recovered":"5\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ede"},"Country":"Nicaragua","Cases":"12\n","Deaths":"3\n","Recovered":"7\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed7"},"Country":"Dominica","Cases":"16\n","Deaths":"0\n","Recovered":"9\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222edd"},"Country":"Falkland Islands","Cases":"13\n","Deaths":"0\n","Recovered":"11\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222edf"},"Country":"Åland Islands","Cases":"11\n","Deaths":"0\n","Recovered":"0\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee3"},"Country":"Seychelles","Cases":"11\n","Deaths":"0\n","Recovered":"7\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222edc"},"Country":"Saint Vincent","Cases":"14\n","Deaths":"0\n","Recovered":"5\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee2"},"Country":"Montserrat","Cases":"11\n","Deaths":"0\n","Recovered":"2\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ed6"},"Country":"Curaçao","Cases":"16\n","Deaths":"1\n","Recovered":"12\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee4"},"Country":"Turks & Caicos Islands","Cases":"11\n","Deaths":"1\n","Recovered":"4\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee1"},"Country":"Greenland","Cases":"11\n","Deaths":"0\n","Recovered":"11\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee8"},"Country":"Papua New Guinea","Cases":"8\n","Deaths":"0\n","Recovered":"0\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee7"},"Country":"Vatican City","Cases":"9\n","Deaths":"0\n","Recovered":"2\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee9"},"Country":"Artsakh","Cases":"7\n","Deaths":"0\n","Recovered":"0\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222edb"},"Country":"Northern Mariana Islands ","Cases":"14\n","Deaths":"2\n","Recovered":"11\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eec"},"Country":"British Virgin Islands","Cases":"6\n","Deaths":"1\n","Recovered":"3\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee6"},"Country":"Suriname","Cases":"10\n","Deaths":"1\n","Recovered":"7\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eee"},"Country":"South Sudan","Cases":"5\n","Deaths":"0\n","Recovered":"0\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eed"},"Country":"Somaliland","Cases":"6\n","Deaths":"0\n","Recovered":"1\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef1"},"Country":"Anguilla","Cases":"3\n","Deaths":"0\n","Recovered":"1\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eeb"},"Country":"Mauritania","Cases":"7\n","Deaths":"1\n","Recovered":"6\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee0"},"Country":"Burundi","Cases":"11\n","Deaths":"1\n","Recovered":"4\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef3"},"Country":"Saba","Cases":"2\n","Deaths":"0\n","Recovered":"0\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef2"},"Country":"Bonaire","Cases":"2\n","Deaths":"0\n","Recovered":"1\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef8"},"Country":"USS Theodore Roosevelt","Cases":"856\n","Deaths":"1\n","Recovered":"112\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ee5"},"Country":"The Gambia","Cases":"10\n","Deaths":"1\n","Recovered":"6\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef6"},"Country":"Saint Pierre & Miquelon","Cases":"1\n","Deaths":"0\n","Recovered":"0\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef0"},"Country":"Abkhazia","Cases":"3\n","Deaths":"0\n","Recovered":"2\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef7"},"Country":"Yemen","Cases":"1\n","Deaths":"0\n","Recovered":"1\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222efd"},"Country":"Leopold I","Cases":"1\n","Deaths":"0\n","Recovered":"0\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eea"},"Country":"Bhutan","Cases":"7\n","Deaths":"0\n","Recovered":"3\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222efb"},"Country":"MS Zaandam","Cases":"13\n","Deaths":"4\n","Recovered":"—\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef5"},"Country":"Guantanamo Bay","Cases":"1\n","Deaths":"—\n","Recovered":"—\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222efc"},"Country":"HNLMS Dolfijn","Cases":"8\n","Deaths":"0\n","Recovered":"—\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222eef"},"Country":"São Tomé & Príncipe","Cases":"4\n","Deaths":"0\n","Recovered":"0\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222efa"},"Country":"Greg Mortimer","Cases":"128\n","Deaths":"0\n","Recovered":"—\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef4"},"Country":"Sint Eustatius","Cases":"2\n","Deaths":"0\n","Recovered":"1\n"}
+{"_id":{"$oid":"5ea4e47439975e63de222ef9"},"Country":"Costa Atlantica","Cases":"148\n","Deaths":"0\n","Recovered":"0\n"}
