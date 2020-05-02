@@ -1,0 +1,34 @@
+<!-- API KEY: AIzaSyC1JBlAgGBM1qyuwkFxkUNOZbcZQ13lieQ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 500px;  /* The height is 500 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>MyCO Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  // var uluru = {lat: -25.344, lng: 131.036};
+  var uluru = {lat: 37.542571, lng: -121.993037};
+
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 11, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!-- Load the API from the specified URL -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1JBlAgGBM1qyuwkFxkUNOZbcZQ13lieQ&callback=initMap">
+    </script>
+  </body>
+</html>
