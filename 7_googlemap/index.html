@@ -12,19 +12,38 @@
   <body>
     <h3>MyCO Google Maps Demo</h3>
     <div id="map"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  // var uluru = {lat: -25.344, lng: 131.036};
-  var uluru = {lat: 37.542571, lng: -121.993037};
+    // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        var uluru = {lat: 37.542571, lng: -121.993037};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+          document.getElementById('map'), {zoom: 9, center: uluru});
 
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 11, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
+
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map});
+
+        var location = $.get("http://localhost:3000/data/myco_location", (data) => {
+          for(i = 0; i < data.locations.location.length; i++){
+          // for(i = 0; i < ; i++){
+            var myco = data.locations.location[i];
+            var coord = {lat: myco.latitude, lng: myco.longitude};
+            // console.log(map);
+            console.log(coord);
+            // var map = new google.maps.Map(
+            //   document.getElementById('map'), {zoom: 9, center: coord});
+
+            var marker = new google.maps.Marker({position: coord, map: map});
+
+
+          };
+
+
+        });
+      };
     </script>
     <!-- Load the API from the specified URL -->
     <script async defer

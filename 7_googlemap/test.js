@@ -1,22 +1,22 @@
-const {Client, Status} = require("@googlemaps/google-maps-services-js");
+const fs = require('fs');
 
-const client = new Client({});
 
-client
-  .elevation({
-    params: {
-      locations: [{ lat: 45, lng: -110 }],
-      key: "asdf",
-    },
-    timeout: 1000, // milliseconds
-  })
-  .then((r) => {
-    if (r.data.status === Status.OK) {
-      console.log(r.data.results[0].elevation);
-    } else {
-      console.log(r.data.error_message);
-    }
-  })
-  .catch((e) => {
-    console.log(e);
-  });
+function getStores(){
+    var jsonObject = JSON.parse(fs.readFileSync('myco_location.json', 'utf8'));
+        for(const locations in jsonObject){
+            for(const location in jsonObject[locations]){
+                // console.log(`${jsonObject[locations][location]}`);
+                for(const it in jsonObject[locations][location]){
+                    console.log(`Item${it}: `);
+                    console.log(jsonObject[locations][location][it].latitude);
+                    console.log(jsonObject[locations][location][it].longitude);
+                    console.log(jsonObject[locations][location][it].type);
+                    console.log(jsonObject[locations][location][it].$revenue);
+                    console.log(' ');
+
+                }
+            }
+        }
+}
+
+getStores();
