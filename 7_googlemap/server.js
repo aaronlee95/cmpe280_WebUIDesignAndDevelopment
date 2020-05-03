@@ -1,6 +1,3 @@
-// import {Client, Status} from "@googlemaps/google-maps-services-js";
-// const {Client, Status} = require("@googlemaps/google-maps-services-js");
-
 'use strict'
 
 const http = require('http');
@@ -15,6 +12,10 @@ const port = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(express.static(path.join(__dirname,'public')));
+console.log(__dirname + '/public');
+console.log(path.join(__dirname,'public'));
 
 const route = require('./routes/routes.js')(app, fs);
 

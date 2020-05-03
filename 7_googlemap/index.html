@@ -1,3 +1,5 @@
+<!-- https://developers.google.com/maps/documentation/javascript/adding-a-google-map -->
+<!-- https://developers.google.com/maps/documentation/javascript/markers#marker_labels -->
 <!-- API KEY: AIzaSyC1JBlAgGBM1qyuwkFxkUNOZbcZQ13lieQ -->
 <!DOCTYPE html>
 <html>
@@ -22,26 +24,52 @@
         var map = new google.maps.Map(
           document.getElementById('map'), {zoom: 9, center: uluru});
 
-
+        var retail = 0;
         // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({position: uluru, map: map});
+        // var marker = new google.maps.Marker({position: uluru, map: map});
 
         var location = $.get("http://localhost:3000/data/myco_location", (data) => {
           for(i = 0; i < data.locations.location.length; i++){
-          // for(i = 0; i < ; i++){
             var myco = data.locations.location[i];
             var coord = {lat: myco.latitude, lng: myco.longitude};
-            // console.log(map);
-            console.log(coord);
-            // var map = new google.maps.Map(
-            //   document.getElementById('map'), {zoom: 9, center: coord});
+            // console.log(coord);
+            if(myco.type == "RetailLocation"){
+              retail++;
+              flag_color = "green_flag";
+              _label = retail.toString();
+              var cityCircle = new google.maps.Circle({
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35,
+                map: map,
+                center: coord,
+                radius: Math.sqrt(myco.$revenue)
+              })
 
-            var marker = new google.maps.Marker({position: coord, map: map});
+            }
+            else if(myco.type == "Distribution Facility"){
+              flag_color = "red_flag";
+              _label = null;
+            }
+            else if(myco.type == "HeadQuarters"){
+              flag_color = "white_flag";
+              _label = null;
+            }
+            else{
+              flag_color = "blue_flag";
+              _label = null;
+            }
 
-
+            var image = 'http://localhost:3000/images/' + flag_color + '.png';
+            var marker = new google.maps.Marker({
+              position: coord,
+              map: map,
+              icon: image,
+              label: _label
+            });
           };
-
-
         });
       };
     </script>
